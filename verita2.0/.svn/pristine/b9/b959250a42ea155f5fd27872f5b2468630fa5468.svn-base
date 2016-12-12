@@ -1,0 +1,41 @@
+<div ng-controller="smMonitorController as smctrl">
+	<div class="smMonitorPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">{{smMonitotrTitle}}</div>
+		</div>
+		<div class="monitorPanel-body panel-body">
+			<div class="row graphWell bTop">
+				<div id="monitorLoadImg_id" class="loadImage_class">
+					<i class="fa fa-spinner fa-spin fa-3x"></i>
+				</div>
+				<div class="monitorTable mTop">
+					<table class="table monitor_tab table-bordered">
+						<thead>
+							<tr>
+								<th>Widget Name</th>
+								<th>Tool Name</th>
+								<th>Status</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="scrumMasterMonitor in scrumMasterMonitorDetails">
+								<td>{{scrumMasterMonitor.widgetname}}</td>
+								<td>{{scrumMasterMonitor.tool}}</td>
+								<td>
+									<div ng-switch="scrumMasterMonitor.status">
+										<div ng-switch-when="true">
+											<i class="fa fa-arrow-up" style="color: #23D025"></i>
+											<div ng-switch-when="false">
+												<i class="fa fa-arrow-down" style="color: red"></i>
+								</td>
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

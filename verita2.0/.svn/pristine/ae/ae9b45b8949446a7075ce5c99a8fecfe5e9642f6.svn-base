@@ -1,0 +1,21 @@
+<div ng-controller="JiraFeatureListImpController as sjic">
+	<div class="jiraPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Feature<br>
+				<div class="panel_subTitle">{{jiraTitle}}</div>
+			</div>
+		</div>
+		<div class="jiraPanel-body panel-body">
+			<div class="row graphWell bTop">
+				<div id="jiraFeatureLoadImg_id" class="loadImage_class">
+					<i class="fa fa-spinner fa-spin fa-3x"></i>
+				</div>
+				<div id="featureWidget" class="jiraFeature"
+					style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+	</div>
+</div>

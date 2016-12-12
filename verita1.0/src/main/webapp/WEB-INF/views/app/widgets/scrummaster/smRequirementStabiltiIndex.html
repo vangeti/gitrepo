@@ -1,0 +1,21 @@
+<div ng-controller="smRequirementStabilityIndexController as srsictrl">
+	<div class="smRSIPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Requirement Statbility Index<br>
+				<div class="panel_subTitle">{{sRSiTitle}}</div>
+			</div>
+		</div>
+		<div class="reqStabilityPanel-body panel-body">
+			<div class="row graphWell bTop">
+				<div id="reqStabilityLoadImg_id" class="loadImage_class">
+					<img src="views/images/spinner.gif" alt="" />
+				</div>
+				<div id="smRSIChart" class="smRSI"
+					style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+	</div>
+</div>

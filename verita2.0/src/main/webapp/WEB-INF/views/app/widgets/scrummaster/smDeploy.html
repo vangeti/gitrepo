@@ -1,0 +1,45 @@
+<div ng-controller="smDeployController as sdctrl">
+	<div class="smDeployPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">{{smDeployTitle}}</div>
+		</div>
+		<div class="deployPanel-body panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="deployLoadImg_id" class="loadImage_class">
+					<i class="fa fa-spinner fa-spin fa-3x"></i>
+				</div>
+				<table class="table deploy_tab table-bordered mTop">
+					<thead>
+						<tr>
+							<th>No</th>
+							<th>Status</th>
+							<th>Date</th>
+							<th>Duration (Sec)</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="scrumMasterDeploy in scrumMasterDeployDetails">
+							<td>{{scrumMasterDeploy.number}}</td>
+							<td>
+								<div ng-switch="scrumMasterDeploy.result">
+									<div ng-switch-when="FAILURE">
+										<i class="fa fa-arrow-down" style="color: red"></i>
+									</div>
+									<div ng-switch-when="SUCCESS">
+										<i class="fa fa-arrow-up" style="color: #23D025"></i>
+									</div>
+								</div>
+							</td>
+							<td>{{scrumMasterDeploy.executedtime}}</td>
+							<td>{{scrumMasterDeploy.duration}}</td>
+						</tr>
+
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

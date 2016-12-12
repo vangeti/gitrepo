@@ -1,0 +1,89 @@
+<div ng-controller="PerfTestDetailsController as tdctrl">
+	<div class="tdPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">
+				Test Execution Summary<br>
+				<div class="panel_subTitle">{{date}}</div>
+			</div>
+		</div>
+		<div class="tdPanel-body panel-body">
+			<div id="perfTestDetailsLoadImg_id" class="loadImage_class">
+				<img src="views/images/spinner.gif" alt="" />
+			</div>
+
+			<div class="row graphWell perfTestDetailsTable">
+
+				<div class="row bTop">
+					<div class="col-md-4 mTop">
+						<div class="tdTopTitle">
+							Project Name<br>
+							<div class="tdTop_subTitle">{{projectName}}</div>
+						</div>
+					</div>
+					<div class="col-md-4 mTop">
+						<div class="tdTopTitle">
+							Duration<br>
+							<div class="tdTop_subTitle1">{{duration}}</div>
+						</div>
+					</div>
+					<div class="col-md-4 mTop">
+						<div class="tdTopTitle">
+							Users<br>
+							<div class="tdTop_subTitle1">{{users}}</div>
+						</div>
+					</div>
+				</div>
+				<div class="row bTop">
+					<div class="col-md-6 mTop" style="border-right: 1px solid #ccc;">
+						<div class="row tdBottom_Title">Average</div>
+						<div class="row">
+							<div class="col-md-6 tdBotTitle">
+								Hits<br>
+								<div class="tdBot_subTitle">92</div>
+							</div>
+							 <div class="col-md-6 tdTopTitle">
+								Error Count<br>
+								<div class="tdBot_subTitle">0</div>
+							</div> 
+						</div>
+						<div class="row">
+							<div class="col-md-6 tdTopTitle">
+								Response<br>
+								<div class="tdBot_subTitle">{{averageResponse}}</div>
+							</div>
+						 	 <div class="col-md-6 tdTopTitle">
+								Samples<br>
+								<div class="tdBot_subTitle">{{avgsamples}}</div>
+							</div>  
+						</div>
+					</div>
+					<div class="col-md-6 mTop">
+						<div class="row tdBottom_Title">Total</div>
+						<div class="row">
+							<div class="col-md-6 tdTopTitle">
+								Hits<br>
+								<div class="tdBot_subTitle">487</div>
+							</div>
+							 <div class="col-md-6 tdTopTitle">
+								Error Count<br>
+								<div class="tdBot_subTitle">0</div>
+							</div> 
+						</div>
+						<div class="row">
+							 <div class="col-md-6 tdTopTitle">
+								Samples<br>
+								<div class="tdBot_subTitle">{{totalsamples}}</div>
+							</div> 
+							<!-- <div class="col-md-6 tdTopTitle">
+								% Error<br>
+								<div class="tdBot_subTitle">{{percentileError}}</div>
+							</div> -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

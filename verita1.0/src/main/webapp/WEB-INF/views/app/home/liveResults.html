@@ -1,0 +1,70 @@
+<script src="http://code.jquery.com/jquery-latest.min.js"
+        type="text/javascript"></script>
+        <style>
+        .col {
+    -webkit-column-count: ; /* Chrome, Safari, Opera */
+    -moz-column-count: 2; /* Firefox */
+    column-count: 2;
+}
+#saveTest{
+/*margin-top:-10px;*/
+z-index: -1;
+}
+.flag{
+display:none;
+}
+        </style>
+<div class="panel panel-default drilDownPanel">
+	<div class="panel-heading do-panel-heading">
+		<div class="panel-title">Live Results</div>
+	</div>
+	<div class="panel-body drilDownPanel-Body">
+		<div class="graphWell">
+			<div class="row mTopMini" style="height:600px">
+				 <iframe src="http://172.16.31.104:8081/eligibilitychecker-war/" height="100%" width="100%" style="min-height:700px"></iframe> 
+<!-- 
+<div class="banner cols">
+<input type="button" value="save test" id="saveTest">
+<div class="flag" id="flag">
+<input type="text" id="test_name" value="" placeholder="Enter Test Name">
+<input type="text" id="testStart_time" value="" placeholder="Enter test startTime">
+<input type="text" id="testEnd_time" value="" placeholder="Enter test endTime">
+<button id="save" name="save">Save times</button>
+</div>
+</div>
+<div class="cols">
+ <iframe name='select_frame' id="iframeContent" src='http://172.16.29.229:3000/dashboard/db/jmeterliveresultsaws?theme=light' height="600px" width="100%"></iframe>
+ </div>-->
+<script>
+
+/*$( document ).ready(function() {
+    console.log( "ready!" );
+  //  $(".flag").hide();
+  //  document.domain="172.16.18.151";
+	$('#save').click(function() {
+  //  var name = $('iframe[name=select_frame]').contents().find('ng-modal=ctrl.timeRaw.from').val();
+	//alert(name);	
+var test_start=Date.parse($("#testStart_time").val()+'');
+var test_end=Date.parse($("#testEnd_time").val()+'');
+ $.ajax({url: "saveTestDetails",
+	 type: 'post',
+	 data:{"testname":$("#test_name").val(),"startTime":test_start,"endTime":test_end},
+	 success: function(result){
+      //  $("#div1").html(result);
+      alert("done"+result);
+    },
+    error:function(error)
+    {
+    	}
+	 });
+});
+	$('#saveTest').click(function() {
+		// $("#flag").show();
+		    $("#flag").toggleClass("flag");
+		});
+});*/
+</script>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,121 @@
+<div ng-controller="testerUpdatesControllerCompare as tdctrl">
+	<div class="testerUpdatePanel panel" style="height: 395px;">
+		<div class="panel-heading do-panel-heading">
+
+			<div class="panel-title">Tester Updates</div>
+		</div>
+		<div class="panel-body"
+			style="overflow-y: scroll !important; min-height: 300px;">
+			<div id="testerUpdateLoadImg_id" style="display: none;"
+				class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<!-- 			<form id="comment"> -->
+			<!-- 				<label>Observation -Test1 And Test2 </label> -->
+			<!-- 				<textarea class="form-control" rows="3" id="comment" -->
+			<!-- 					ng-model="newcomment.comment"></textarea> -->
+			<!-- 				<input type="button" value="Add" ng-click="savecomment('COMPARISION_TEST')" -->
+			<!-- 					class="btn btn-primary btn-xs" id="addButton" /> -->
+			<!-- 			</form> -->
+
+
+			<!-- Test - 1 Comments & Action -->
+			<div id="tupdateTest1">
+				<table class="table table-striped">
+					<thead style="font-size: smaller;">
+						<tr>
+							<th>{{testwith}} - Comments</th>
+							<th ng-show="showfullData">User Name</th>
+							<th ng-show="showfullData">Date and Time</th>
+							<!-- <th>Action</th> -->
+						</tr>
+					</thead>
+					<tr ng-repeat="test1Comment in test1Comments">
+						<td>{{test1Comment.comment_name}}</td>
+						<td ng-show="showfullData">{{test1Comment.user_name}}</td>
+						<td ng-show="showfullData">{{test1Comment.comment_date}}</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Test - 2 Comments & Action -->
+			<div id="tupdateTest2">
+				<table class="table table-striped">
+					<thead style="font-size: smaller;">
+						<tr>
+							<th>{{testto}} - Comments</th>
+							<th ng-show="showfullData">User Name</th>
+							<th ng-show="showfullData">Date and Time</th>
+							<!-- <th>Action</th> -->
+						</tr>
+					</thead>
+					<tr ng-repeat="test2Comment in test2Comments">
+						<td>{{test2Comment.comment_name}}</td>
+						<td ng-show="showfullData">{{test2Comment.user_name}}</td>
+						<td ng-show="showfullData">{{test2Comment.comment_date}}</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- Comparision Comments & Actions here -->
+			<div id="tupdate">
+				<table class="table table-striped">
+					<thead style="font-size: smaller;">
+						<tr>
+							<th>Comment</th>
+							<th ng-show="showfullData">User Name</th>
+							<th ng-show="showfullData">Date and Time</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="comment in comments"
+							ng-include="getTemplate(comment)">
+						</tr>
+					</tbody>
+					<script type="text/ng-template" id="display">
+                        <td>{{comment.comment_name}}</td>
+ 							<td ng-show="showfullData">{{comment.user_name}}</td>
+                        	<td ng-show="showfullData">{{comment.comment_date}}</td>						                
+                        <td>
+                               <button class="btn btn-primary btn-xs"  ng-click="editComment(comment)">Edit</button>
+ 								<button class="btn btn-primary btn-xs"  ng-click="delComment(comment)">Del</button>
+                        </td>
+                    </script>
+					<script type="text/ng-template" id="edit">
+                         <td><input type="text" ng-model="comment.comment_name" style="width:100%" class="form-control"/></td>
+                          		<td  ng-show="showfullData">{{comment.user_name}}</td>
+                        		<td  ng-show="showfullData">{{comment.comment_date}}</td>						       
+                         <td id="buttons">
+                               <button class="btn btn-primary btn-xs"  ng-click="updateComment(comment)">Save</button>
+                               <button class="btn btn-primary btn-xs"  ng-click="reset()">Cancel</
+>
+                         </td>
+                   </script>
+
+				</table>
+
+			</div>
+			<!-- <div>
+				<button ng-click="toggle()">Add Comparision Comments</button>
+			</div>
+
+			<div ng-show="myVar"> -->
+			<form id="comment">
+				<!-- <label>Observation -Test1 And Test2 </label> -->
+				<label></label>
+				<textarea class="form-control" rows="3" id="comment"
+					ng-model="newcomment.comment"></textarea>
+				<input type="button" value="Add"
+					ng-click="savecomment('COMPARISION_TEST')"
+					class="btn btn-primary btn-xs" id="addButton" />
+			</form>
+			<!-- </div> -->
+
+		</div>
+
+
+
+
+	</div>
+</div>

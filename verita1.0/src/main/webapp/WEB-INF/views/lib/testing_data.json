@@ -1,0 +1,711 @@
+{  
+   "defects":[
+  {
+    "Defect_ID": 427,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 428,
+    "Application_Name": "TXWeb",
+    "Severity": 2,
+    "Closing_Date": "",
+    "Defect_Closed_Date": "06-04-2016"
+  },
+  {
+    "Defect_ID": 429,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 430,
+    "Application_Name": "SAP - FICO",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "01-06-2016"
+  },
+  {
+    "Defect_ID": 431,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 432,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 433,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 434,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": "18-06-2016"
+  },
+  {
+    "Defect_ID": 435,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-07-2016"
+  },
+  {
+    "Defect_ID": 436,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 437,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "14-06-2016"
+  },
+  {
+    "Defect_ID": 438,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "22-05-2016"
+  },
+  {
+    "Defect_ID": 439,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 440,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 441,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "25-05-2016"
+  },
+  {
+    "Defect_ID": 442,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "12-04-2016"
+  },
+  {
+    "Defect_ID": 443,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "24-04-2016"
+  },
+  {
+    "Defect_ID": 444,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "15-05-2016"
+  },
+  {
+    "Defect_ID": 445,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 446,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "29-04-2016"
+  },
+  {
+    "Defect_ID": 447,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "03-04-2016"
+  },
+  {
+    "Defect_ID": 448,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "06-05-2016"
+  },
+  {
+    "Defect_ID": 449,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "22-05-2016"
+  },
+  {
+    "Defect_ID": 450,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "27-07-2016"
+  },
+  {
+    "Defect_ID": 451,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "25-07-2016"
+  },
+  {
+    "Defect_ID": 452,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-07-2016"
+  },
+  {
+    "Defect_ID": 453,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "23-07-2016"
+  },
+  {
+    "Defect_ID": 454,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "16-07-2016"
+  },
+  {
+    "Defect_ID": 455,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "11-07-2016"
+  },
+  {
+    "Defect_ID": 456,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-04-2016"
+  },
+  {
+    "Defect_ID": 457,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "27-07-2016"
+  },
+  {
+    "Defect_ID": 458,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "21-05-2016"
+  },
+  {
+    "Defect_ID": 459,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "03-06-2016"
+  },
+  {
+    "Defect_ID": 460,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 461,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "30-04-2016"
+  },
+  {
+    "Defect_ID": 462,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 463,
+    "Application_Name": "SAP - FICO",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "27-05-2016"
+  },
+  {
+    "Defect_ID": 464,
+    "Application_Name": "SAP - FICO",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": "27-04-2016"
+  },
+  {
+    "Defect_ID": 465,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-06-2016"
+  },
+  {
+    "Defect_ID": 466,
+    "Application_Name": "SAP - FICO",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "25-06-2016"
+  },
+  {
+    "Defect_ID": 467,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "09-04-2016"
+  },
+  {
+    "Defect_ID": 468,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "23-07-2016"
+  },
+  {
+    "Defect_ID": 469,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "04-07-2016"
+  },
+  {
+    "Defect_ID": 470,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "27-05-2016"
+  },
+  {
+    "Defect_ID": 471,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "24-04-2016"
+  },
+  {
+    "Defect_ID": 472,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 473,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 474,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "27-04-2016"
+  },
+  {
+    "Defect_ID": 475,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "26-05-2016"
+  },
+  {
+    "Defect_ID": 476,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "30-06-2016"
+  },
+  {
+    "Defect_ID": 477,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "24-04-2016"
+  },
+  {
+    "Defect_ID": 478,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "22-04-2016"
+  },
+  {
+    "Defect_ID": 479,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 480,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 481,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "12-06-2016"
+  },
+  {
+    "Defect_ID": 482,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "08-06-2016"
+  },
+  {
+    "Defect_ID": 483,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "26-04-2016"
+  },
+  {
+    "Defect_ID": 484,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "06-07-2016"
+  },
+  {
+    "Defect_ID": 485,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": "23-06-2016"
+  },
+  {
+    "Defect_ID": 486,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "06-07-2016"
+  },
+  {
+    "Defect_ID": 487,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "11-08-2016",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 488,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "05-05-2016"
+  },
+  {
+    "Defect_ID": 489,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "12-07-2016"
+  },
+  {
+    "Defect_ID": 490,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "01-05-2016"
+  },
+  {
+    "Defect_ID": 491,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "26-04-2016"
+  },
+  {
+    "Defect_ID": 492,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 493,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "26-05-2016"
+  },
+  {
+    "Defect_ID": 494,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "20-04-2016"
+  },
+  {
+    "Defect_ID": 495,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 496,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "30-04-2016"
+  },
+  {
+    "Defect_ID": 497,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "07-05-2016"
+  },
+  {
+    "Defect_ID": 498,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "09-04-2016"
+  },
+  {
+    "Defect_ID": 499,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "12-07-2016"
+  },
+  {
+    "Defect_ID": 500,
+    "Application_Name": "Citrix",
+    "Severity": 2,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 501,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "15-05-2016"
+  },
+  {
+    "Defect_ID": 502,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "16-04-2016"
+  },
+  {
+    "Defect_ID": 503,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "18-07-2016"
+  },
+  {
+    "Defect_ID": 504,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "24-05-2016"
+  },
+  {
+    "Defect_ID": 505,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "01-05-2016"
+  },
+  {
+    "Defect_ID": 506,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "07-04-2016"
+  },
+  {
+    "Defect_ID": 507,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "07-07-2016"
+  },
+  {
+    "Defect_ID": 508,
+    "Application_Name": "SAP - Billing",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 509,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "15-06-2016"
+  },
+  {
+    "Defect_ID": 510,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "18-04-2016"
+  },
+  {
+    "Defect_ID": 511,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 512,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "23-06-2016"
+  },
+  {
+    "Defect_ID": 513,
+    "Application_Name": "Citrix",
+    "Severity": 2,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 514,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-07-2016"
+  },
+  {
+    "Defect_ID": 515,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "18-06-2016"
+  },
+  {
+    "Defect_ID": 516,
+    "Application_Name": "SAP - FICO",
+    "Severity": 3,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "28-06-2016"
+  },
+  {
+    "Defect_ID": 517,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "06-04-2016"
+  },
+  {
+    "Defect_ID": 518,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "04-05-2016"
+  },
+  {
+    "Defect_ID": 519,
+    "Application_Name": "Citrix",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 520,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "16-05-2016"
+  },
+  {
+    "Defect_ID": 521,
+    "Application_Name": "Citrix",
+    "Severity": 4,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 522,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "22-05-2016"
+  },
+  {
+    "Defect_ID": 523,
+    "Application_Name": "Citrix",
+    "Severity": 3,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  },
+  {
+    "Defect_ID": 524,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "12-07-2016"
+  },
+  {
+    "Defect_ID": 525,
+    "Application_Name": "SAP - Billing",
+    "Severity": 2,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "19-04-2016"
+  },
+  {
+    "Defect_ID": 526,
+    "Application_Name": "TXWeb",
+    "Severity": 4,
+    "Closing_Date": "05-08-2016",
+    "Defect_Closed_Date": "29-05-2016"
+  },
+  {
+    "Defect_ID": 528,
+    "Application_Name": "Test",
+    "Severity": 1,
+    "Closing_Date": "",
+    "Defect_Closed_Date": ""
+  }
+]
+}

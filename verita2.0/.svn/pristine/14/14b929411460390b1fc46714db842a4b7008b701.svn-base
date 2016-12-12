@@ -1,0 +1,42 @@
+<div ng-controller="smMeanTimeController as stcctrl">
+	<div class="smMTTFPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Mean Time To Find a Defect<br>
+				<div class="panel_subTitle">{{sMTTFTitle}}</div>
+			</div>
+		</div>
+		<div class="meanTimePanel-body panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="meanTimeLoadImg_id" class="loadImage_class">
+					<i class="fa fa-spinner fa-spin fa-3x"></i>
+				</div>
+				<div ng-show="chartFlag">
+					<div id="smMTTFChart" class="smMTTF"
+						style="width: 600px; height: 300px;"></div>
+				</div>
+				<div ng-show="tableFlag">
+					<div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Application Name</th>
+									<th>Mean Time</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="(key,value) in mTimeMap">
+									<td>{{key}}</td>
+									<td>{{value}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

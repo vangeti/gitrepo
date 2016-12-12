@@ -1,0 +1,38 @@
+<div ng-controller="responseCodesControllerCompare as tdctrl">
+	<div class="responseCodesPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxRCForComparision.html'"></div>
+			<!-- <b class="panelHeaderTextPadding">Response Codes</b> -->
+			<div class="panel-title">Response Codes</div>
+
+		</div>
+		<div id='responseCodesComparePdf' style='display: none'></div>
+		<div>
+			<a href="#" ng-click="rccgeneratePDF();">Generate PDF</a>
+		</div>
+
+		<div class="panel-body">
+			<div id="respnsecodeLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<!-- <div class="tdPanel-body panel-body">
+			<div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+				<div class="col-md-12">
+					<p class="widgetHeading">{{tdTitle}}</p>
+				</div>
+			</div> -->
+
+
+			<div class="row graphWell">
+				<div id="responseCodesGraphCompare"
+					style="width: 600px; height: 280px;"></div>
+			</div>
+		</div>
+		<!-- <div class="panel-footer" align="right">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="bottom" title="Export Excel"><i
+				class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div> -->
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<div ng-controller="smDefectSeverityController as sdsictrl">
+	<div class="smDefectSeverityPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Defect Severity Index<br>
+				<div class="panel_subTitle">{{sDSITitle}}</div>
+			</div>
+		</div>
+		<div class="defectSevPanel-body panel-body">
+			<div class="row graphWel bTop">
+				<div id="defectSeverityIndex_id" class="loadImage_class">
+					<img src="views/images/spinner.gif" alt="" />
+				</div>
+				<div id="smDSIChart" class="smDSI"
+					style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+	</div>
+</div>

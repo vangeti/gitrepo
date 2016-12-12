@@ -1,0 +1,185 @@
+<link rel="stylesheet" href="views/css/dc.css">
+<style>
+.dc-chart g.chart-body {
+	clip-path: none;
+}
+</style>
+<div ng-controller="BuildDetailsController as sjic">
+	<div class="buildPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<!-- <div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div> -->
+			<div class="panel-title">{{buildTitle}}</div>
+		</div>
+
+
+		<div class="panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="buildDtls" class="buildDetails"></div>
+			</div>
+
+		</div>
+		<div class="panel-footer" align="center">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="top" title="Export Excel"><i
+				style="float: right" class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="views/lib/js/d3.js"></script>
+<script type="text/javascript" src="views/lib/js/crossfilter.js"></script>
+<script type="text/javascript" src="views/lib/js/dc.js"></script>
+<script>
+
+/* $('#buildDetailsLoadImg_id').show(); */
+
+var chart = dc.barChart("#buildDtls");
+d3.json("devops/rest/gtb", function(error, builds) {
+
+	/* $('#buildDetailsLoadImg_id').hide(); */
+	
+	  builds = builds.TotalBuildDetails;
+	  builds.forEach(function(x) {
+		  x.build_count = +x.build_count;
+	  });
+	  var selectedMenu = 'week2';
+	  var ndx                 = crossfilter(builds),
+	  dateDimension        = ndx.dimension(function(d) {return d.build_date;});
+  
+	  speedSumGroup       = dateDimension.group().reduce(function(p, v) {
+		  p[v.build_status] = (p[v.build_status] || 0) + v.build_count;
+		  return p;
+	  }, function(p, v) {
+		  p[v.build_status] = (p[v.build_status] || 0) - v.build_count;
+		  
+		  return p;
+	  }, function() {
+			return {};
+		 }
+	  );
+		  
+	  function sel_stack(i) {
+		  return function(d) {
+			  return d.value[i];
+		  };
+	  }
+
+		var weekDimension = ndx.dimension(function(d) {return d.filter_by;});
+		var weekGroup = weekDimension.group();
+
+		var selectField = dc.selectMenu('#menuselect');
+	
+		selectField
+		.dimension(weekDimension)
+		.group(weekGroup)		
+		.on('renderlet', function(selectField) {
+				
+			if(d3.event) {
+				selectedMenu =  d3.event.target.selectedOptions[0].value;
+			} else { 
+				selectedMenu = 'week1';
+			}
+				
+			dateDimension = ndx.dimension(function(d) {
+									if(selectedMenu == "") {
+										return d.build_date;
+									} else {
+										if(d.filter_by == selectedMenu) {
+											return d.build_date;
+										}
+									}
+								}
+							);
+				
+			  speedSumGroup = dateDimension.group().reduce(function(p, v) {			  
+				  if(selectedMenu == "") {
+							p[v.build_status] = (p[v.build_status] || 0) + v.build_count;
+						} else {
+							if(v.filter_by == selectedMenu) {
+								p[v.build_status] = (p[v.build_status] || 0) + v.build_count;
+							}
+						}								
+					  return p;
+				  }, function(p, v) {
+					  if(selectedMenu == "") {
+								p[v.build_status] = (p[v.build_status] || 0) - v.build_count;
+						} else {
+							if(v.filter_by == selectedMenu) {
+								p[v.build_status] = (p[v.build_status] || 0) - v.build_count;
+							}
+						}
+					  return p;
+				  }, function() {
+					  return {};
+					}
+				);	
+		  
+				chart.dimension(dateDimension);
+				chart.group(speedSumGroup, "1", sel_stack('1'))
+	  
+				for(var j = 2; j<3; j++) {
+					chart.stack(speedSumGroup, ''+j, sel_stack(j));
+				}
+				chart.render();
+				chart.redraw();
+			}); 
+	
+	
+selectField.title(function(d){
+return 'Weeks: ' + d.key;
+});
+
+selectField.filterDisplayed(function (d) {
+	return true;
+});
+
+	chart
+		.width(200).height(300)
+		.x(d3.scale.ordinal())
+		.xUnits(dc.units.ordinal)
+		.colors(d3.scale.ordinal()
+		.domain(["1","2"])
+		.range(["#2ca02c","#FF0000"]))
+		.renderHorizontalGridLines(true)
+		.renderVerticalGridLines(true)
+		.centerBar(false)
+		.gap(2)
+		.margins({left: 50, top: 20, right: 10, bottom: 80})
+		.brushOn(false)
+		.clipPadding(10)			  
+		.title(function(d) {
+		  if(this.layer == 1) { status = 'Success'; 
+		  } else {
+			status = 'Failed';
+			}
+		  return d.key + '[' + status + ']: ' + d.value[this.layer];
+		})
+		.xAxisLabel("Date")
+		.yAxisLabel("Builds")
+		.elasticX(true)
+		.elasticY(true)			  
+		.dimension(dateDimension)
+		.group(speedSumGroup, "1", sel_stack('1'))
+		.renderLabel(true)
+		.renderlet(function (chart) {
+			chart.selectAll("g.x text")
+			  .attr('dx', '-30')
+			  .attr('dy', '0')
+			  .attr('transform', "rotate(-25)");
+		})
+		.xAxis();
+
+		for(var i = 2; i<3; ++i) {
+	
+			chart.stack(speedSumGroup, ''+i, sel_stack(i));
+		}
+	  chart.yAxis().tickFormat(d3.format("d"));
+	  dc.renderAll();
+	  
+	  $("#menuselect > select option[value='']").remove();
+	  $("#menuselect > select").val("week1");
+
+});
+
+</script>

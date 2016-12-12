@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>dc.js - Ordinal Bar Chart Example</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../css/dc.css" />
+
+<style>
+label {
+	font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+
+	<div class="container">
+		<hr>
+		<div class="row">
+			<div class="container">
+				<div class="row" style="float: left;">
+					<div class="chart-wrapper">
+						<label>Chart Type:</label> <select name="chartType" id="chartType">
+							<option value="barChart">Bar Chart</option>
+							<option value="lineChart">Line Chart</option>
+						</select> <label>Aggregate Function:</label> <select name="aggrFunc"
+							id="aggrFunc">
+							<option value="">Select Aggregate function..</option>
+							<option value="count">Count</option>
+						</select> <label>Select X:</label> <select name="xColumn" id="xColumn">
+							<option value="">Select X-Axis</option>
+						</select> <label>Select Y:</label> <select name="yColumn" id="yColumn">
+							<option value="">Select Y-Axis</option>
+						</select> <br /> <input type="button" name="Submit" id="Submit"
+							value="Submit" onclick="drawChart();" />
+					</div>
+
+					<br />
+					<br />
+					<div class="chart-wrapper" style='display: none;'>
+						<div class="chart-title">
+							Total Bug Count: <strong> <span id="total-records"></span>
+							</strong>
+						</div>
+					</div>
+					<div class="chart-wrapper" style='display: none;'>
+						<span> <a href="javascript:dc.filterAll();dc.redrawAll();">
+								<!-- <font color="#33CC99">Reset All Filters</font> -->
+								<button>Reset All Filters</button>
+						</a>
+						</span>
+					</div>
+
+				</div>
+
+
+				<div class="row" style="float: left; margin-left: 70px;">
+					<div id="chart"></div>
+					<!-- <div id="app_chart"></div> -->
+				</div>
+			</div>
+
+			<script type="text/javascript" src="../js/d3.js"></script>
+			<script type="text/javascript" src="../js/crossfilter.js"></script>
+			<script type="text/javascript" src="../js/dc-latest.js"></script>
+			<script type='text/javascript' src='../js/queue.js'></script>
+
+			<script
+				src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+			<script type="text/javascript" src="../js/defects_charts.js"></script>
+		</div>
+
+	</div>
+</body>
+</html>

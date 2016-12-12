@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html ng-app="mainApp" ng-controller="appController as app">
+<head>
+<!-- <base href="/ngtest1/"> -->
+<link rel="icon" href="/views/images/Devoplogo.png">
+<title>ALMAP</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="views/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+<!-- <link rel="stylesheet" href="views/css/bootstrap.min.css"> -->
+
+<!-- <link rel="stylesheet" href="views/css/simple-sidebar.css"> -->
+
+<link type="text/css"
+	href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.12/themes/redmond/jquery-ui.css"
+	rel="stylesheet" />
+<!--PT comment <link
+	href="http://cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css"
+	rel="stylesheet" /> -->
+<link type="text/css"
+	href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css"
+	rel="stylesheet" />
+<!-- <link href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" rel="stylesheet"> -->
+<!-- PT comment
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">-->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+<link
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css"
+	rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet"
+	href="http://l-lin.github.io/font-awesome-animation/dist/font-awesome-animation.min.css">
+
+<link rel="stylesheet" ng-href="views/css/style.css">
+<!-- <link rel="stylesheet" ng-href="views/css/{{stylePath}}"> -->
+
+<link rel="stylesheet" href="views/lib/css/jquery-ui.min.css" />
+<link rel="stylesheet" href="views/lib/css/lobipanel.min.css" />
+
+<link rel="stylesheet" href="views/lobi/css/lobiadmin-with-plugins.css" />
+<link rel="stylesheet" href="views/lobi/css/demo.css" />
+
+<script
+	src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.3/ui-bootstrap.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.min.js"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/angular-datatables/0.5.4/angular-datatables.min.js"></script>
+<script type="text/javascript"
+	src="https://cdn.jsdelivr.net/ngstorage/0.3.6/ngStorage.min.js"></script>
+
+<script src="views/lib/js/raphael-2.1.4.min.js"></script>
+<script src="views/lib/js/justgage.js"></script>
+<script src="views/lib/js/jquery-ui.min.js"></script>
+<script src="views/lib/js/lobipanel.js"></script>
+
+<script type="text/javascript" src="views/lib/js/googleChartLoader.js"></script>
+
+
+<script type="text/javascript"
+	src="views/lib/js/jquery.mousewheel.pack.js?v=3.1.3"></script>
+<script type="text/javascript"
+	src="views/lib/js/jquery.fancybox.pack.js?v=2.1.5"></script>
+<script type="text/javascript"
+	src="views/lib/js/jquery.fancybox-buttons.js?v=1.0.5"></script>
+<script type="text/javascript"
+	src="views/lib/js/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+<script type="text/javascript"
+	src="views/lib/js/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet" type="text/css"
+	href="views/lib/css/jquery.fancybox.css?v=2.1.5" media="screen" />
+<link rel="stylesheet" type="text/css"
+	href="views/lib/css/jquery.fancybox-buttons.css?v=1.0.5" />
+<link rel="stylesheet" type="text/css"
+	href="views/lib/css/jquery.fancybox-thumbs.css?v=1.0.7" />
+
+<!-- R Libs -->
+<!-- <script src="views/lib/js/r_libraries/RGraph.common.core.js"></script>
+<script src="views/lib/js/r_libraries/RGraph.common.dynamic.js"></script>
+<script src="views/lib/js/r_libraries/RGraph.common.tooltips.js"></script>
+<script src="views/lib/js/r_libraries/RGraph.pie.js"></script> -->
+
+<script type="text/javascript">
+	google.charts.load('visualization', '1', {
+		packages : [ 'gauge', 'corechart', 'bar' ]
+	});
+	$('[data-toggle="tooltip"]').tooltip();
+</script>
+
+</head>
+
+<body class="bodyback">
+	<div>
+		<div ui-view=""></div>
+	</div>
+
+	<!-- <script type="text/javascript" src="js/lib/jquery.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/lib/jquery-ui.min.js"></script> -->
+	<!-- <script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script> -->
+	<script type="text/javascript" src="views/lobi/js/lobi-plugins/lobibox.min.js"></script>
+	<!-- <script type="text/javascript" src="views/lobi/js/lobi-plugins/lobipanel.min.js"></script> -->
+	<!-- <script type="text/javascript"
+		src="js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script> -->
+
+	<!--Make sure that config.js file is loaded before LobiAdmin.js-->
+	<script type="text/javascript" src="views/lobi/js/config.js"></script>
+	<script type="text/javascript" src="views/lobi/js/LobiAdmin.js"></script>
+	<script type="text/javascript" src="views/lobi/js/app.js"></script>
+<!-- 	<script type="text/javascript" src="views/lobi/js/demo.js"></script> -->
+
+
+</body>
+<script src="views/app.js"></script>
+<script src="views/app/app_controller.js"></script>
+<script src="views/services/indexService.js"></script>
+<script src="views/app/login/loginController.js"></script>
+<script src="views/app/header/headerController.js"></script>
+<script src="views/app/home/homeController.js"></script>
+<script src="views/app/sidebar/sidebar.ctrl.js"></script>
+<script src="views/lib/uiBreadcrumbs/uiBreadcrumbs.js"></script>
+
+<!-- CIO Script Files -->
+<!-- <script src="views/app/widgets/cio/releaseReadyController.js"></script>
+<script src="views/app/widgets/cio/leadTimeController.js"></script>
+<script src="views/app/widgets/cio/costController.js"></script>
+<script src="views/app/widgets/cio/valueController.js"></script>
+<script src="views/app/widgets/widgetMenuViews/precriptiveReleaseViewController.js"></script> -->
+
+<!-- Perf Script Files -->
+<script src="views/app/widgets/perf/perfKPIImpController.js"></script>
+<script src="views/app/widgets/perf/perfTestDetailsController.js"></script>
+<script src="views/app/widgets/perf/perfTransRespController.js"></script>
+<script src="views/app/widgets/perf/perfErrorPerController.js"></script>
+<script src="views/app/widgets/perf/perfRespTimeController.js"></script>
+<script src="views/app/widgets/perf/perfTransPerSecController.js"></script>
+<script src="views/app/widgets/perf/perfAvgRespTimeController.js"></script>
+<script src="views/app/widgets/perf/perfErrorPerTrendController.js"></script>
+<script src="views/app/widgets/perf/perfCompareTest.js"></script>
+<script src="views/home/widgets/perf/perfCompareTest.js"></script>
+
+
+<!-- Performance Predict -->
+<script
+	src="views/app/widgets/perf/predict/perfScalabilityFactorPredController.js"></script>
+<script
+	src="views/app/widgets/perf/predict/perfAvgRespTimePredController.js"></script>
+<script
+	src="views/app/widgets/perf/predict/perfCpuUsagePredWidgetController.js"></script>
+<script
+	src="views/app/widgets/perf/predict/perfCpuUtilizationPredController.js"></script>
+
+<!-- Scrum Master Files -->
+<!-- <script
+	src="views/app/widgets/scrummaster/JiraFeatureListImpController.js"></script>
+<script src="views/app/widgets/scrummaster/BuildDetailsController.js"></script>
+<script src="views/app/widgets/scrummaster/smMonitorController.js"></script>
+<script src="views/app/widgets/scrummaster/smDeployController.js"></script>
+<script src="views/app/widgets/scrummaster/smSonarController.js"></script>
+<script
+	src="views/app/widgets/scrummaster/smDefectSeverityController.js"></script>
+<script src="views/app/widgets/scrummaster/smTestProgressController.js"></script>
+<script src="views/app/widgets/scrummaster/smTestCoverageController.js"></script>
+<script src="views/app/widgets/scrummaster/smOpenDefectsController.js"></script>
+<script
+	src="views/app/widgets/scrummaster/smRequirementStabilityIndexController.js"></script>
+<script src="views/app/widgets/scrummaster/smTestCaseYieldController.js"></script>
+<script src="views/app/widgets/scrummaster/smMeanTimeController.js"></script>
+<script
+	src="views/app/widgets/scrummaster/smFeatureReadinessController.js"></script>
+<script src="views/app/widgets/scrummaster/JenBuildDetailsController.js"></script>
+<script
+	src="views/app/widgets/scrummaster/securityVulnerabilityController.js"></script> -->
+
+<!-- Functional Widgets (Selenium) -->
+
+<!-- <script
+	src="views/app/widgets/Functional/SeleniumTestDetailsController.js"></script>
+
+<script src="views/app/widgets/perf/Lennox/jmeter/TestController.js"></script> -->
+
+<!-- Predict File -->
+<script src="views/app/widgets/perf/predict/predictController.js"></script>
+
+<!-- Custom Widget -->
+<script src="views/app/widgets/custom/customWidgetDynController.js"></script>
+
+
+<!-- Services -->
+
+<script src="views/services/login_svc.js"></script>
+<script src="views/services/widget_svc.js"></script>
+
+
+<link rel="stylesheet" type="text/css" href="views/customwidget/css/dc.css" />
+
+<script src="views/app/home/customWidgetController.js"></script>
+<script src="views/services/customwidget_svc.js"></script>
+
+</html>

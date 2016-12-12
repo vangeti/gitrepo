@@ -1,0 +1,313 @@
+
+<div class="row">
+	<!-- <div class="col-md-12 do-margin hello"> -->
+	<div class="container-fluid" id="homeContainer" style="margin-top: 10px;">
+		<!--  CIO Widgets -->
+		<div class="col-md-12 widgetDiv" ng-show="rrPanelFlag">
+			<div ng-if="rrPanelFlag"
+				ng-include="'views/app/widgets/cio/releaseReadyness.html'"></div>
+		</div>
+		<div class="col-md-6 widgetDiv" ng-show="ltPanelFlag">
+			<div ng-if="ltPanelFlag"
+				ng-include="'views/app/widgets/cio/leadTime.html'"></div>
+		</div>
+		<div class="col-md-6 widgetDiv" ng-show="cPanelFlag">
+			<div ng-if="cPanelFlag"
+				ng-include="'views/app/widgets/cio/cost.html'"></div>
+		</div>
+		<div class="col-md-6 widgetDiv" ng-show="vPanelFlag">
+			<div ng-if="vPanelFlag"
+				ng-include="'views/app/widgets/cio/value.html'"></div>
+		</div>
+
+		<!-- Performance Widgets -->
+
+		<div class="col-md-6 widgetDiv" ng-show="tdPanelFlag">
+			<div ng-if="tdPanelFlag"
+				ng-include="'views/app/widgets/perf/perfTestDetails.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="avgRTPanelFlag">
+			<div ng-if="avgRTPanelFlag"
+				ng-include="'views/app/widgets/perf/perfAvgRespTime.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="kpiPanelFlag">
+			<div ng-if="kpiPanelFlag"
+				ng-include="'views/app/widgets/perf/perfKPIImp.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="tpsPanelFlag">
+			<div ng-if="tpsPanelFlag"
+				ng-include="'views/app/widgets/perf/perfTransPerSec.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="trespPanelFlag">
+			<div ng-if="trespPanelFlag"
+				ng-include="'views/app/widgets/perf/perfTransResp.html'"></div>
+		</div>
+
+
+		<div class="col-md-6 widgetDiv" ng-show="respTimePanelFlag">
+			<div ng-if="respTimePanelFlag"
+				ng-include="'views/app/widgets/perf/perfRespTime.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="eperTPanelFlag">
+			<div ng-if="eperTPanelFlag"
+				ng-include="'views/app/widgets/perf/perfErrorPerTrend.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="epercPanelFlag">
+			<div ng-if="epercPanelFlag"
+				ng-include="'views/app/widgets/perf/perfErrorPercentile.html'"></div>
+		</div>
+
+
+		<div class="col-md-6 widgetDiv" ng-show="false">
+			<div ng-if="false"
+				ng-include="'views/app/widgets/perf/predict/perfScalabilityFactorPred.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="false">
+			<div ng-if="false"
+				ng-include="'views/app/widgets/perf/predict/perfAvgRespTimePred.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="false">
+			<div ng-if="false"
+				ng-include="'views/app/widgets/perf/predict/perfCpuUsagePredWidget.html'"></div>
+		</div>
+
+
+		<!-- Scrum Master -->
+		<div class="col-md-6 widgetDiv" ng-show="jiraFlag">
+			<div ng-if="jiraFlag"
+				ng-include="'views/app/widgets/scrummaster/JiraFeatureListImp.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="jenkinsFlag">
+			<div ng-if="jenkinsFlag"
+				ng-include="'views/app/widgets/scrummaster/JenBuildDetails.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="jenkinsBuildFlag">
+			<div ng-if="jenkinsBuildFlag"
+				ng-include="'views/app/widgets/scrummaster/BuildDetails.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="DeployFlag">
+			<div ng-if="DeployFlag"
+				ng-include="'views/app/widgets/scrummaster/smDeploy.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="sonarFlag">
+			<div ng-if="sonarFlag"
+				ng-include="'views/app/widgets/scrummaster/smSonar.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmDSIFlag">
+			<div ng-if="rmDSIFlag"
+				ng-include="'views/app/widgets/scrummaster/smDefectSeverity.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmTEPFlag">
+			<div ng-if="rmTEPFlag"
+				ng-include="'views/app/widgets/scrummaster/smTestProgress.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmTCFlag">
+			<div ng-if="rmTCFlag"
+				ng-include="'views/app/widgets/scrummaster/smTestCoverage.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmODSFLag">
+			<div ng-if="rmODSFLag"
+				ng-include="'views/app/widgets/scrummaster/smOpenDefects.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="monitorFlag">
+			<div ng-if="monitorFlag"
+				ng-include="'views/app/widgets/scrummaster/smMonitor.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmRSIFlag">
+			<div ng-if="rmRSIFlag"
+				ng-include="'views/app/widgets/scrummaster/smRequirementStabiltiIndex.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmFRFlag">
+			<div ng-if="rmFRFlag"
+				ng-include="'views/app/widgets/scrummaster/smFeatureReadiness.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmTCYFlag">
+			<div ng-if="rmTCYFlag"
+				ng-include="'views/app/widgets/scrummaster/smTestCaseYield.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="rmMTTFFlag">
+			<div ng-if="rmMTTFFlag"
+				ng-include="'views/app/widgets/scrummaster/smMeanTime.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="SecVCGFlag">
+			<div ng-if="SecVCGFlag"
+				ng-include="'views/app/widgets/scrummaster/SecurityVulnerability.html'"></div>
+		</div>
+
+
+
+
+		<!-- Jmeter -->
+
+		<div class="col-md-6 widgetDiv" ng-show="JMtdPanelFlag">
+			<div ng-if="JMtdPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMTestDetails.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="JMavgRTPanelFlag">
+			<div ng-if="JMavgRTPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMAvgRespTime.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="JMkpiPanelFlag">
+			<div ng-if="JMkpiPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMKPIImp.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="JMtpsPanelFlag">
+			<div ng-if="JMtpsPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMTransPerSec.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="JMtrespPanelFlag">
+			<div ng-if="JMtrespPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMTransResp.html'"></div>
+		</div>
+
+
+		<div class="col-md-6 widgetDiv" ng-show="JMrespTimePanelFlag">
+			<div ng-if="JMrespTimePanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMRespTime.html'"></div>
+		</div>
+
+
+		<div class="col-md-6 widgetDiv" ng-show="JMepercPanelFlag">
+			<div ng-if="JMepercPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMErrorPercentile.html'"></div>
+		</div>
+
+		<div class="col-md-6 widgetDiv" ng-show="JMeperTPanelFlag">
+			<div ng-if="JMeperTPanelFlag"
+				ng-include="'views/app/widgets/perf/jmeter/perfJMErrorPerTrend.html'"></div>
+		</div>
+
+		<!-- Lennox Perf-->
+
+		<!-- <div class="col-md-6 widgetDiv" ng-show="jmTSFLPFlag">
+			<div ng-if="jmTSFLPFlag"
+				ng-include="'views/app/widgets/perf/Lennox/jmeter/test.html'"></div>
+		</div> -->
+
+		<!-- Functional Widgets (Selenium) -->
+
+		<div class="col-md-6 widgetDiv" ng-show="SelTESFlag">
+			<div ng-if="SelTESFlag"
+				ng-include="'views/app/widgets/Functional/SeleniumTestDetails.html'"></div>
+		</div>
+
+		<!-- Lenoxx -->
+
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_TS">
+			<div ng-if="FLAG_LEX_TS"
+				ng-include="'views/app/widgets/lennox/jmeter/lennoxUserProfile.html'"></div>
+		</div>
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_KPI">
+			<div ng-if="FLAG_LEX_KPI"
+				ng-include="'views/app/widgets/lennox/jmeter/lennoxObservations.html'"></div>
+		</div>
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_TS">
+			<div ng-if="FLAG_LEX_TS"
+				ng-include="'views/app/widgets/lennox/jmeter/testerUpdates.html'"></div>
+		</div> 
+		
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_AT">
+			<div ng-if="FLAG_LEX_AT"
+				ng-include="'views/app/widgets/lennox/jmeter/Copy_of_activeThreadsOverTime.html'"></div>
+		</div>
+<!--activeThreadsOverTime.html  -->
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_AG">
+			<div ng-if="FLAG_LEX_AG"
+				ng-include="'views/app/widgets/lennox/jmeter/aggregateReport.html'"></div>
+		</div>
+<!-- aggregateReport.html -->
+		<div class="col-md-6 widgetDiv" ng-show="FLAG_LEX_HS">
+			<div ng-if="FLAG_LEX_HS"
+				ng-include="'views/app/widgets/lennox/jmeter/Copy_of_hitsPerSecond.html'"></div>
+		</div>
+<!-- hitsPerSecond.html -->
+		 <div class="col-md-12 widgetDiv" ng-show="FLAG_LEX_RC">
+			<div ng-if="FLAG_LEX_RC"
+				ng-include="'views/app/widgets/lennox/jmeter/Copy_of_responseCodes.html'"></div>
+		</div> 
+			<!--   responseCodes.html -->
+		<div class="col-md-12 widgetDiv" ng-show="FLAG_LEX_RT">
+			<div ng-if="FLAG_LEX_RT"
+				ng-include="'views/app/widgets/lennox/jmeter/Copy_of_responseTimes.html'"></div>
+				<!-- responseTimes.html -->
+		</div>
+
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="predictModal" role="dialog" href="#">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Predictive Analysis</h4>
+				</div>
+				<div class="modal-body" style="min-height: 340px; height: 340px;">
+					<div ng-include="'views/app/widgets/perf/predict/predict.html'"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="diagnoseModal" role="dialog" href="#">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Diagnostic Analysis</h4>
+				</div>
+				<div class="modal-body">
+					<div ng-include="'views/app/widgets/perf/prescribe/prescribe.html'"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+		<div class="modal fade" id="lennoxInterpretModal" role="dialog" href="#">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Interpret</h4>
+				</div>
+				<div class="modal-body">
+					<div ng-include="'views/app/widgets/widgetMenu/interpret/tsInterpret.html'"></div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

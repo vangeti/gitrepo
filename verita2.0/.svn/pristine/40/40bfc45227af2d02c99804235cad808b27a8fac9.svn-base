@@ -1,0 +1,15 @@
+<div ng-controller="PerfAvgRTController as artctrl">
+	<div class="avgRtPanel panel commonPanel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">Average Response Time</div>
+		</div>
+		<div class="avgrtPanel-body panel-body">
+			<div class="row graphWell bTop">
+				<div id="avgrespTime" class="perfAvgResp"
+					style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+	</div>
+</div>

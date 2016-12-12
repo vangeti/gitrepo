@@ -1,0 +1,23 @@
+<div ng-controller="PerfTransPerSecController as epctrl">
+	<div class="transPSPanel panel">
+		<div class="panel-heading do-panel-heading">
+		<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">Transaction Per Second Trend</div>
+		</div>
+		<div class="epPanel-body panel-body">
+
+			<div id="perfTransPerLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<div class="perfTps">
+				<div class="row graphWell bTop" align="center">
+					<div id="tpsChart" style="width: 600px; height: 300px;"></div>
+				</div>
+				<div class="row graphWell bTop" align="center">
+					<div id="tpsChartCombo" style="width: 600px; height: 300px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

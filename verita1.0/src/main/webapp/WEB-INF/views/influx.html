@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<title>Admin Configuration</title>
+</head>
+<body>
+
+	<div >
+		<div >
+			IP Address: <input type="text" name="ip_address" id="ip_address"  value="">
+			Port number:<input type="text" name="port" id="port"  value=""> Database
+			name:<input type="text" name="database" id="database"  value="">
+			Project Name: <input type="text" name="projectname" id="projectname"  value="">
+			
+			<input type="button" value="submit" id="submit">
+		</div>
+	</div>
+</body>
+<script>
+
+$( document ).ready(function() {
+    console.log( "ready!" );
+    
+    $( "#submit" ).click(function() {
+    	$.ajax({
+      	  type: "POST",
+      	  url: "/devops/admin/influx/insert",
+      	  data: {"ip":$("#ip_address").val(),"port":$("#port").val(),"database":$("#database").val(),"projectname":$("#projectname").val()},
+      	  success: function(resultData) { alert("Save Complete"); },
+      	  error: function(err) { alert("error") }
+      	//  dataType: dataType
+      	});
+    	});
+});
+/*var app = angular.module('admininflux', []);
+app.controller('influxconfig', ["$scope","$http","$filter",function($scope, $http, $filter) {
+	
+	
+	var ele=angular.element(this);
+	if()
+		{
+		
+		}
+	if($scope.ip_address!=""){
+		alert("****''");
+		}
+}]);*/
+
+
+/* function FormController($log, $window, $scope) {
+	
+	alert("****");
+}
+
+FormController.$inject = ['$log', '$window', '$scope'];
+angular.module('admininflux').controller('influxconfig', FormController); */
+  
+//influxconfig.$inject = ["$scope", "$http", "$filter"];
+</script>
+
+</html>

@@ -1,0 +1,131 @@
+<div ng-controller="aggregateReportController as tdctrl">
+       <div class="aggregateReportPanel panel">
+              <div class="panel-heading do-panel-heading">
+                     <div class="widgetMenuIncludeDiv"
+                           ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxAggrRep.html'"></div>
+                     <!-- <b class="panelHeaderTextPadding">Aggregate Report</b> -->
+                     <div class="panel-title">Aggregate Report</div>
+              </div>
+              <!-- <div class="tdPanel-body panel-body">
+                     <div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+                           <div class="col-md-12">
+                                  <p class="widgetHeading">{{tdTitle}}</p>
+                           </div> -->
+              <!--   <div class="col-md-3">
+                                  <label class="switch switch-green"> <input type="checkbox"
+                                         cla0ss="switch-input" checked> <span class="switch-label"
+                                         data-on="K" data-off="K"></span> <span class="switch-handle"></span>
+                                  </label>
+                           </div> -->
+
+
+              <!-- <div style="margin-top: -6%; margin-left: 25%; width: 50%;">
+
+                           <ul class="nav nav-tabs" style="margin: 1% 0% 0% 1%;">
+                                  <li class="active"><a href="#">Transaction</a></li>
+                                  <li><a href="#">Requests</a></li>
+                           </ul>
+                     </div> -->
+
+
+                           
+                           
+              <div class="panel-body">
+					<div id="aggrprtLoadImg_id" class="loadImage_class">
+						<i class="fa fa-spinner fa-spin fa-3x"></i>
+					</div>
+                     <!-- <table class="table table-bordered" id="headerTable">
+-->   
+                    <div class="row" style="padding: 10px;">
+                           <label>Search: </label>
+                           <input type="text" name='keyword' value=""  data-ng-change="applyFilter(data)" data-ng-model="data" size="25"/>                              
+                     </div>
+                     <div id="divScroll" align="center">
+                           <table class="table table-bordered">
+                                  <thead>
+                                         <tr>
+                                         <th><a href="#"
+                                                       ng-click="sortType = 'transactionName'; sortReverse = !sortReverse">
+                                                              Transaction Name <span
+                                                              ng-show="sortType == 'transactionName' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'transactionName' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 74px;"><a href="#"
+                                                       ng-click="sortType = 'count'; sortReverse = !sortReverse">
+                                                              Count <span ng-show="sortType == 'count' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'count' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 1px;"><a href="#"
+                                                       ng-click="sortType = 'avg'; sortReverse = !sortReverse">
+                                                              Average (ms) <span
+                                                              ng-show="sortType == 'avg' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'avg' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 1px;"><a href="#"
+                                                       ng-click="sortType = 'aggregate_report_90_line'; sortReverse = !sortReverse">
+                                                              90% Line(ms) <span
+                                                              ng-show="sortType == 'aggregate_report_90_line' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'aggregate_report_90_line' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 1px;"><a href="#"
+                                                       ng-click="sortType = 'aggregate_report_min'; sortReverse = !sortReverse"> Min
+                                                              (ms) <span ng-show="sortType == 'aggregate_report_min' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'aggregate_report_min' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 65px;"><a href="#"
+                                                       ng-click="sortType = 'aggregate_report_max'; sortReverse = !sortReverse"> Max
+                                                              (ms) <span ng-show="sortType == 'aggregate_report_max' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'aggregate_report_max' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                <th style="width: 91px;"><a href="#"
+                                                       ng-click="sortType = 'aggregate_report_error'; sortReverse = !sortReverse">
+                                                              Error (%) <span ng-show="sortType == 'aggregate_report_error' && !sortReverse"
+                                                              class="fa fa-caret-down"></span> <span
+                                                              ng-show="sortType == 'aggregate_report_error' && sortReverse"
+                                                              class="fa fa-caret-up"></span>
+                                                </a></th>
+                                                
+                                         </tr>
+                                  </thead>
+
+                                  <tbody>
+                                         <!-- <tr ng-repeat="roll in sushi | orderBy:sortType:sortReverse | filter:searchFish"> -->
+                                         <tr ng-repeat="agg in aggList | orderBy:sortType:sortReverse">
+                                                <td>{{ agg.transactionName }}</td>
+                                                <td>{{ agg.count }}</td>
+                                                <td style="padding: 1% 16px 1% 21px;">{{ agg.avg }}</td>
+                                                <td style="padding: 1% 20px 1% 21px;">{{
+                                                       agg.aggregate_report_90_line }}</td>
+                                                <td style="padding: 1% 11px 1% 7px;">{{
+                                                       agg.aggregate_report_min }}</td>
+                                                <td>{{ agg.aggregate_report_max }}</td>
+                                                <td>{{ agg.aggregate_report_error }}</td>
+                                                
+                                         </tr>
+                                  </tbody>
+                           </table>
+                     </div>
+
+                     <div class="row graphWell">
+                           <div id="coderepo1" class="perfTestDetailsTable"></div>
+                     </div>
+              </div>
+       </div>
+</div>
+<!-- <div class="panel-footer" align="right">
+       <span class="widgetFooterSpan" data-toggle="tooltip"
+              data-placement="bottom" title="Export Excel"><i
+              class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+</div> -->

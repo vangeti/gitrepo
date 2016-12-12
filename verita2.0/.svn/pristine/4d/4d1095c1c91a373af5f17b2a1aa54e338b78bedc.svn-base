@@ -1,0 +1,768 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
+<!-- 2016-11-23T00:06:30 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4e1e361a-69f5-41e8-8ce0-c472992aed3b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<style name="Table_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 1_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 2_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TH" mode="Opaque" backcolor="#F0F8FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_CH" mode="Opaque" backcolor="#BFE1FF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table 3_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<subDataset name="Dataset1" uuid="454379be-0ee6-40dc-9b73-a2b57eb7d99a">
+		<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+		<parameter name="Test_Summary" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="scenario_name" class="java.lang.String"/>
+		<field name="maxThreads" class="java.lang.String"/>
+		<field name="teststarttime" class="java.lang.String"/>
+		<field name="testendtime" class="java.lang.String"/>
+		<field name="rampup" class="java.lang.String"/>
+		<field name="steadyperiod" class="java.lang.String"/>
+		<field name="rampdown" class="java.lang.String"/>
+		<field name="testduration" class="java.lang.String"/>
+		<field name="error" class="java.lang.Double"/>
+		<field name="tps" class="java.lang.Double"/>
+		<field name="responseTime" class="java.lang.Double"/>
+		<field name="testdatetimezone" class="java.lang.String"/>
+		<field name="testscenarios" class="java.lang.String"/>
+		<field name="testenvurl" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Dataset2" uuid="861d76e9-f306-42e0-8f0d-8f0270afd74f">
+		<parameter name="Test_Summary1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="error" class="java.lang.Double"/>
+		<field name="tps" class="java.lang.Double"/>
+		<field name="responseTime" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="Dataset3" uuid="5051d8c0-597a-4346-92fa-30fffc4961ee">
+		<parameter name="Test_Update" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="comment_name" class="java.lang.String"/>
+		<field name="comment_date" class="java.lang.String"/>
+	</subDataset>
+	<subDataset name="Dataset4" uuid="339fde86-9565-47f9-8908-8349e4a20e4f">
+		<parameter name="Response_Time_Details" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="transactionName" class="java.lang.String"/>
+		<field name="count" class="java.lang.Long"/>
+		<field name="avg" class="java.lang.Long"/>
+		<field name="aggregate_report_90_line" class="java.lang.Long"/>
+		<field name="aggregate_report_min" class="java.lang.Long"/>
+		<field name="aggregate_report_max" class="java.lang.Long"/>
+		<field name="aggregate_report_error" class="java.lang.Double"/>
+	</subDataset>
+	<subDataset name="Dataset5" uuid="84892dba-bb3b-4ce4-bb78-d63a40d91eb1">
+		<parameter name="ResponseTime_Graph" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="responseTimeGraph" class="java.lang.Double"/>
+		<field name="transactionNameGraph" class="java.lang.String"/>
+		<field name="elapsedTimeGraph" class="java.util.Date"/>
+	</subDataset>
+	<subDataset name="Dataset6" uuid="0ddb3c23-61b0-441e-a65b-446d9d529f3c">
+		<parameter name="ResponseTime_Graph1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="responseTimeGraph" class="java.lang.Long"/>
+		<field name="transactionNameGraph" class="java.lang.String"/>
+		<field name="elapsedTimeGraph" class="java.lang.Long"/>
+	</subDataset>
+	<subDataset name="Dataset7" uuid="29bea10a-538d-4a7d-a554-53ae4bb0091a">
+		<parameter name="Transactions_Graph" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="responseTimeGraph" class="java.lang.Long"/>
+		<field name="transactionNameGraph" class="java.lang.String"/>
+		<field name="elapsedTimeGraph" class="java.lang.Long"/>
+	</subDataset>
+	<parameter name="Test_Summary" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Test_Summary1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Test_Update" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Response_Time_Details" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ResponseTime_Graph" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="ResponseTime_Graph1" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<parameter name="Transactions_Graph" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="scenario_name" class="java.lang.String"/>
+	<field name="maxThreads" class="java.lang.String"/>
+	<field name="teststarttime" class="java.lang.String"/>
+	<field name="testendtime" class="java.lang.String"/>
+	<field name="rampup" class="java.lang.String"/>
+	<field name="steadyperiod" class="java.lang.String"/>
+	<field name="rampdown" class="java.lang.String"/>
+	<field name="testduration" class="java.lang.String"/>
+	<field name="error" class="java.lang.Double"/>
+	<field name="tps" class="java.lang.Double"/>
+	<field name="responseTime" class="java.lang.Double"/>
+	<field name="comment_name" class="java.lang.String"/>
+	<field name="comment_date" class="java.lang.String"/>
+	<field name="transactionName" class="java.lang.String"/>
+	<field name="count" class="java.lang.Long"/>
+	<field name="avg" class="java.lang.Long"/>
+	<field name="aggregate_report_90_line" class="java.lang.String"/>
+	<field name="aggregate_report_min" class="java.lang.Long"/>
+	<field name="aggregate_report_max" class="java.lang.Long"/>
+	<field name="aggregate_report_error" class="java.lang.Long"/>
+	<field name="responseTimeGraph" class="java.lang.Double"/>
+	<field name="transactionNameGraph" class="java.lang.String"/>
+	<field name="elapsedTimeGraph" class="java.util.Date"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="150" y="10" width="190" height="30" uuid="3c81a416-268e-4682-a3f1-c457c0aa1021"/>
+				<text><![CDATA[Performance Testing Reports]]></text>
+			</staticText>
+			<image>
+				<reportElement x="462" y="10" width="98" height="50" uuid="2730dedc-f759-46a3-bf15-bfbda0926a16"/>
+				<imageExpression><![CDATA["C:/Users/E001102/Desktop/0057_cigniti-logo.jpg"]]></imageExpression>
+			</image>
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="12" y="50" width="100" height="30" uuid="1c492bb4-99c5-4ee9-97ff-ea02b049e898"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="103" y="50" width="100" height="30" uuid="b692d89f-fad6-4df4-be75-69886bc09328"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="10" y="89" width="533" height="1" uuid="f8249172-5571-4e66-823a-fb62d1ef3d04"/>
+			</line>
+		</band>
+	</title>
+	<detail>
+		<band height="126" splitType="Stretch">
+			<componentElement>
+				<reportElement x="10" y="50" width="528" height="60" uuid="10683dc4-e621-42dd-878c-b69eaef27063">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table_TD"/>
+					<property name="net.sf.jasperreports.export.headertoolbar.table.name" value=""/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset1" uuid="392ab3b9-4b95-4891-8811-163123aa34fc">
+						<dataSourceExpression><![CDATA[$P{Test_Summary}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="70" uuid="98c6e8cb-b4df-4742-bd8b-1c9d120c71fa">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="fe3e5bb5-7823-4ac7-aafa-530c66842fc9"/>
+								<text><![CDATA[scenario_name]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="e875e8fe-d337-40f0-b434-15378dfe87c2"/>
+								<textFieldExpression><![CDATA[$F{scenario_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="136bb515-2438-4018-9fc6-8987a5deb5ee">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="06f04748-72fa-4784-a917-402dc60d695a"/>
+								<text><![CDATA[maxThreads]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="80cece52-e096-4271-9228-83fb2c4667dc"/>
+								<textFieldExpression><![CDATA[$F{maxThreads}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c2605931-0ecd-4a14-85c4-763a0c0666ee">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="2157ec77-8b89-4a56-938a-47f940d11731"/>
+								<text><![CDATA[teststarttime]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="fb267886-3d36-4036-9792-8e7fa3af7fb7"/>
+								<textFieldExpression><![CDATA[$F{teststarttime}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="3c24be25-301b-4ae5-a266-4089135383be">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="431dd789-633c-4395-a029-ddff6837fe86"/>
+								<text><![CDATA[testendtime]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="7905b21d-59a9-41bf-962b-1e421a71e4e4"/>
+								<textFieldExpression><![CDATA[$F{testendtime}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="d9f6c036-2cd1-497e-8e23-d4a0ca023d4d">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="c66fdf34-164a-4181-90f5-1336febc210b"/>
+								<text><![CDATA[rampup]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="63dfd791-87a9-4965-a4bf-69f07dfd20c5"/>
+								<textFieldExpression><![CDATA[$F{rampup}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="77b1ea42-5a71-4d0d-a9ae-571a77524419">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="d429cf0d-d0df-4bae-a6f7-c130fed7280c"/>
+								<text><![CDATA[steadyperiod]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="6b43cace-4054-41d6-b11a-2bc161153bc3"/>
+								<textFieldExpression><![CDATA[$F{steadyperiod}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="dcfe3e95-ad92-4cc4-8a68-474a205d5ee7">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="55" height="30" uuid="589aef86-425f-4f12-af41-60eff664cdbc"/>
+								<text><![CDATA[rampdown]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="55" height="30" uuid="02f4b547-ae4b-4116-85ab-dc13e65dc567"/>
+								<textFieldExpression><![CDATA[$F{rampdown}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="55" uuid="fb1425fc-1b63-4783-8824-aefbccafae72">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column8"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="55" height="30" uuid="77bbe6c4-d8b8-457a-8d42-3e1eaa32ab10"/>
+								<text><![CDATA[testduration]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="55" height="30" uuid="87f07fcf-3131-477a-a8f1-70f4be7ceee2"/>
+								<textFieldExpression><![CDATA[$F{testduration}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="35256f71-cb5b-4e9e-810b-ec88967eded5">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column9"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="7b960071-386f-4863-8331-2992751bb3f8"/>
+								<text><![CDATA[DateTimeZone]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="e64a4d52-1ec8-44fc-ba39-d610bfcf4834"/>
+								<textFieldExpression><![CDATA[$F{testdatetimezone}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="2" uuid="bcb913ec-c239-4b1c-87b5-12f2d514125f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column10"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30"/>
+					</jr:column>
+					<jr:column width="2" uuid="c2979983-5fb7-4a18-b82e-9a9fd4786cb2">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column11"/>
+						<jr:columnHeader style="Table_CH" height="30" rowSpan="1"/>
+						<jr:detailCell style="Table_TD" height="30"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="10" y="5" width="100" height="20" uuid="dd7f5010-777d-4585-ae56-35c3e7f33aed"/>
+				<text><![CDATA[TestSummary]]></text>
+			</staticText>
+			<line>
+				<reportElement x="12" y="29" width="533" height="1" uuid="e9f874e2-4114-41a5-90ac-1595c7cf532c"/>
+			</line>
+		</band>
+		<band height="129">
+			<componentElement>
+				<reportElement x="9" y="55" width="271" height="60" uuid="9764e13a-930a-4b1e-9612-a0a20afeba5f">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 1_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 1_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 1_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset2" uuid="250f4eb9-4e9d-4e50-b959-88c234607e08">
+						<dataSourceExpression><![CDATA[$P{Test_Summary1}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="60" uuid="9f715680-37de-4680-bd3c-e8457c14c79f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="fd61bb44-28ec-4c80-8c8f-70ad830c9675"/>
+								<text><![CDATA[Metric]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="94439532-d7c6-41ce-bba1-769c4aa99250"/>
+								<textFieldExpression><![CDATA[$F{error}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="3e4a0f3e-4f70-421b-8d6e-66c4e7e22972">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="2daadf57-4804-4f2e-a4b8-e55bef288245"/>
+								<text><![CDATA[Actual]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="c5088c17-1e8a-4f65-97b6-05bf8ab23529"/>
+								<textFieldExpression><![CDATA[$F{tps}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="e8ecbf51-d6ef-4671-a936-a3c8f5bd7721">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="99923f38-7146-4174-877a-d308721b4ab0"/>
+								<text><![CDATA[Target]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="12244da8-3fb4-47dc-8092-9b738547e151"/>
+								<textFieldExpression><![CDATA[$F{responseTime}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="067155ce-9a32-4601-879c-ebac724bcbda">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table 1_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="c8ca1301-0c47-4f91-9deb-f502ead573d8"/>
+								<text><![CDATA[Difference]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 1_TD" height="30"/>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="13" y="14" width="100" height="20" uuid="d2d484c1-75f0-4517-85ac-4a6d66baee37"/>
+				<text><![CDATA[KPI Widget]]></text>
+			</staticText>
+			<line>
+				<reportElement x="6" y="41" width="532" height="1" uuid="08c57ebc-4152-421d-9b14-54d1bfe91251"/>
+			</line>
+			<line>
+				<reportElement x="7" y="6" width="536" height="6" uuid="1928fccc-d4da-4e9e-ac94-3833c0374c9b"/>
+			</line>
+		</band>
+		<band height="137">
+			<componentElement>
+				<reportElement x="12" y="60" width="190" height="60" uuid="dfd5d7b2-5904-433b-992e-9c95d372ede3">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 2_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 2_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 2_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset3" uuid="b8a71054-798d-4703-a3e9-76fcfdd1fb3a">
+						<dataSourceExpression><![CDATA[$P{Test_Update}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="80" uuid="bbf16148-62c4-4752-a64a-c464a51fd6c0">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="80" height="30" uuid="597284c7-1b18-4e7f-be8b-f643cc567fba"/>
+								<text><![CDATA[Comment]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 2_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="80" height="30" uuid="839c8fcb-8079-4c39-b8c6-940951723f6d"/>
+								<textFieldExpression><![CDATA[$F{comment_name}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="110" uuid="08ade4c5-a089-4bd8-ba36-a80038793d37">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table 2_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="110" height="30" uuid="3d5addc3-041f-4fed-abc8-623e742db9d9"/>
+								<text><![CDATA[Comment Date]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 2_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="110" height="30" uuid="0b342bd9-58f4-4205-91e0-a9bd3003863c"/>
+								<textFieldExpression><![CDATA[$F{comment_date}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+			<staticText>
+				<reportElement x="13" y="14" width="180" height="20" uuid="02163fae-ad83-4e9b-b7b3-fb3f6b433327"/>
+				<text><![CDATA[Tester Updates/Observations]]></text>
+			</staticText>
+			<line>
+				<reportElement x="7" y="40" width="537" height="1" uuid="2394551d-41e8-44ab-95aa-9c8735165b6f"/>
+			</line>
+			<line>
+				<reportElement x="6" y="6" width="537" height="1" uuid="ff3257f0-bd72-4f48-8a5d-8fc421f2af48"/>
+			</line>
+		</band>
+		<band height="142">
+			<staticText>
+				<reportElement x="13" y="13" width="114" height="20" uuid="f9f0b2fc-56b2-42f8-8e0f-cf7fd86a8254"/>
+				<text><![CDATA[Detailed Analysis]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="33" width="534" height="1" uuid="f8fa01ed-a319-40e5-8f44-b96a4ed6d179"/>
+			</line>
+			<line>
+				<reportElement x="6" y="6" width="537" height="1" uuid="b6846e3d-973a-4e9c-9a8b-23c46da988a6"/>
+			</line>
+			<staticText>
+				<reportElement x="11" y="40" width="127" height="30" uuid="1c360fc0-08f6-4051-92f0-7756ac6e5d09"/>
+				<text><![CDATA[Response Time:]]></text>
+			</staticText>
+			<componentElement>
+				<reportElement x="12" y="79" width="529" height="63" uuid="e94c5bbf-550a-4193-859a-90c126169b46">
+					<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.VerticalRowLayout"/>
+					<property name="com.jaspersoft.studio.table.style.table_header" value="Table 3_TH"/>
+					<property name="com.jaspersoft.studio.table.style.column_header" value="Table 3_CH"/>
+					<property name="com.jaspersoft.studio.table.style.detail" value="Table 3_TD"/>
+				</reportElement>
+				<jr:table xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="Dataset4" uuid="b758d611-0afa-4488-b976-df7b84313342">
+						<dataSourceExpression><![CDATA[$P{Response_Time_Details}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:column width="220" uuid="b7d81bc7-d68e-4067-aa86-9040798b72df">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column1"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="220" height="30" uuid="6a72710a-177c-4a35-affe-514a60f17ef2"/>
+								<text><![CDATA[Label]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="220" height="30" uuid="bf058198-5c5c-4f00-b68c-c76911ca3e18"/>
+								<textFieldExpression><![CDATA[$F{transactionName}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="880ef7d6-f22e-4cfb-8388-19ca1122302f">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column2"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="ccf98e81-7a66-41b7-b0fc-67400ad77b03"/>
+								<text><![CDATA[Samples]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="3e1dbda6-b9cf-4833-a94b-faaf5d12da9b"/>
+								<textFieldExpression><![CDATA[$F{count}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="60" uuid="c3b1cc85-4604-4c40-946b-739c2a5c1697">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column3"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="60" height="30" uuid="4f50dec8-2a99-4b7b-ab65-c89f5d0b36e9"/>
+								<text><![CDATA[Average]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="60" height="30" uuid="bb3bda3e-9923-4c8d-bb6a-40fba44f5a4b"/>
+								<textFieldExpression><![CDATA[$F{avg}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="16c70981-f0cf-4bad-b43f-a13166786355">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column4"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="70054f3f-e470-4809-bcc1-bd0d058e6b37"/>
+								<text><![CDATA[Min]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="27b85b2e-5ce2-4bbb-93e3-f144440381c3"/>
+								<textFieldExpression><![CDATA[$F{aggregate_report_min}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="40" uuid="b1d7d3d6-7b8a-49e3-bdd1-dd58454d2778">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column5"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="40" height="30" uuid="2be0153c-6a96-43f5-a273-f36b725f3aa1"/>
+								<text><![CDATA[Max]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="40" height="30" uuid="46324a2c-ba96-43ed-b4c0-a468a614b471"/>
+								<textFieldExpression><![CDATA[$F{aggregate_report_max}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="70" uuid="a72c070e-1fb5-4e6b-ab3a-4733527c8724">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column6"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="70" height="30" uuid="1c7a825d-c646-4b0f-8679-6e64ce89465f"/>
+								<text><![CDATA[90% Line]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="70" height="30" uuid="92e71831-8b73-4276-949c-ee3803ca5d11"/>
+								<textFieldExpression><![CDATA[$F{aggregate_report_90_line}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+					<jr:column width="50" uuid="10d8f524-6484-4fcc-aa46-0b9ef4cfd7f1">
+						<property name="com.jaspersoft.studio.components.table.model.column.name" value="Column7"/>
+						<jr:columnHeader style="Table 3_CH" height="30" rowSpan="1">
+							<staticText>
+								<reportElement x="0" y="0" width="50" height="30" uuid="12cb3114-c9c1-4da3-a122-0857ef9c0b13"/>
+								<text><![CDATA[Error%]]></text>
+							</staticText>
+						</jr:columnHeader>
+						<jr:detailCell style="Table 3_TD" height="30">
+							<textField>
+								<reportElement x="0" y="0" width="50" height="30" uuid="77c4857a-a96b-45e4-bbc7-70f6fdf65d73"/>
+								<textFieldExpression><![CDATA[$F{aggregate_report_error}]]></textFieldExpression>
+							</textField>
+						</jr:detailCell>
+					</jr:column>
+				</jr:table>
+			</componentElement>
+		</band>
+		<band height="431">
+			<staticText>
+				<reportElement x="13" y="15" width="277" height="20" uuid="a20be7a5-d3f6-4011-800f-7655c16e3039"/>
+				<text><![CDATA[Response Time Graph (ResponseTime Vs Elapsed Time]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="42" width="529" height="1" uuid="c3a97ebc-91d3-4332-87df-3434fc7d9632"/>
+			</line>
+			<line>
+				<reportElement x="6" y="7" width="535" height="1" uuid="3ef0baeb-b817-4412-886d-53ce52ded401"/>
+			</line>
+		</band>
+		<band height="488">
+			<line>
+				<reportElement x="6" y="12" width="544" height="1" uuid="c1419b33-2097-4988-bc38-10e4bb84ba8b"/>
+			</line>
+			<staticText>
+				<reportElement x="12" y="20" width="278" height="20" uuid="fd260023-502a-4a4a-9bc0-8d19942f7a67"/>
+				<text><![CDATA[ResponseTime Graph(AvgResponseTimeVsElapsedTime]]></text>
+			</staticText>
+			<line>
+				<reportElement x="9" y="50" width="536" height="2" uuid="6c7cf495-9817-435a-bdd3-9441f9bff25d"/>
+			</line>
+			<timeSeriesChart>
+				<chart evaluationTime="Report">
+					<reportElement x="16" y="80" width="504" height="305" uuid="3dc778e9-012a-467b-814c-0d8028bb4a98"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<timeSeriesDataset timePeriod="Minute">
+					<dataset>
+						<datasetRun subDataset="Dataset5" uuid="4140f46b-1c6d-42ee-ab8e-e308682eb43e">
+							<dataSourceExpression><![CDATA[$P{ResponseTime_Graph}]]></dataSourceExpression>
+						</datasetRun>
+					</dataset>
+					<timeSeries>
+						<seriesExpression><![CDATA[$F{transactionNameGraph}]]></seriesExpression>
+						<timePeriodExpression><![CDATA[$F{elapsedTimeGraph}]]></timePeriodExpression>
+						<valueExpression><![CDATA[$F{responseTimeGraph}]]></valueExpression>
+					</timeSeries>
+				</timeSeriesDataset>
+				<timeSeriesPlot>
+					<plot/>
+					<timeAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</timeAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</timeSeriesPlot>
+			</timeSeriesChart>
+		</band>
+		<band height="417">
+			<line>
+				<reportElement x="9" y="20" width="536" height="1" uuid="447b2be4-83d9-4f47-88a6-5f2412a866ac"/>
+			</line>
+			<line>
+				<reportElement x="9" y="60" width="536" height="1" uuid="457493b3-65c4-481c-b8ab-c5509ef56a63"/>
+			</line>
+			<staticText>
+				<reportElement x="10" y="35" width="300" height="18" uuid="f0ec555d-db1a-4be9-97fd-17c536cbb959"/>
+				<text><![CDATA[ResponseTimeGraph(TransactionsVsElapsedTime]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="16" y="10" width="100" height="30" uuid="e07506f4-ffab-4348-9442-8b7ef1c124fa"/>
+				<text><![CDATA[Designed by cigniti...]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="430" y="10" width="100" height="30" uuid="c49babd2-6306-4913-b988-1ae57fac798d"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

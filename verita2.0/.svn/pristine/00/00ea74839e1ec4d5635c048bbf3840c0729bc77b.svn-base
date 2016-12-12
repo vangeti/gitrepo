@@ -1,0 +1,143 @@
+<div ng-controller="lennoxUserProfileController as tdctrl">
+	<div class="lennoxUserProfilePanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxTs.html'"></div>
+			<div class="panel-title">Test Summary</div>
+		</div>
+		<!-- <div class="tdPanel-body panel-body">
+			<div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+				<div class="col-md-12">
+					<p class="widgetHeading">{{tdTitle}}</p>
+				</div>
+			</div>
+			<div class="col-md-12"> -->
+
+		<div class="panel-body">
+			<div id="tstsummryLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<div id="userScroll">
+				<table class="table" id="profileid" style="width: 100%&gt; &lt;tbody style="border: 2pxsolid #dfd7ca;"> 
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Test Number</td>
+						<td>{{userProfileBean.testName}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Test Name</td>
+						<td>{{userProfileBean.scenario_name}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Total
+							users</td>
+						<!-- <td><div ng-bind="totalUsersSaved" ></div><input type="text" name="totalUsers"
+							ng-model="totalUsersBind" size="10" ng-show="showTotalUsers" class="form-control" style="width: 50%;">
+						<button type="button" class="btn btn-info"
+								style="margin-left: 60%;margin-top: -21%;padding-bottom: 2%;" ng-click="saveTotalUsers()" ng-show="showTotalUsersButton">Submit</button>
+					</td> -->
+						<td>{{ userProfileBean.maxThreads}}</td>
+
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Start
+							Time</td>
+						<td>{{ userProfileBean.teststarttime}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">End
+							Time</td>
+						<td>{{ userProfileBean.testendtime}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Total
+							Test Duration</td>
+						<td>{{ userProfileBean.testduration}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Ramp
+							up</td>
+						<td>{{ userProfileBean.rampup}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Steady
+							Period</td>
+						<td>{{ userProfileBean.steadyperiod}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Ramp
+							down</td>
+						<td>{{ userProfileBean.rampdown}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Date and Time Zone</td>
+						<td>{{userProfileBean.testdatetimezone}}</td>
+<!-- 						<td><div ng-bind="testDateSaved" ng-show="showTestDateDiv"></div> -->
+<!-- 							<input type="text" name="testDate" ng-model="testDateBind" -->
+<!-- 							 ng-show="showTestDate" class="form-control" style="width: 50%;"> -->
+							 
+							 
+							<!-- <button type="button" class="btn btn-primary btn-xs"
+								style="/* margin-left: 14%; */float: right;margin-top: -5%;margin-right: 37%;" ng-click="saveTestDate()"
+								ng-show="showTestDateButton">Submit</button>
+								
+								
+							<button type="button" class="btn btn-primary btn-xs"
+								style="background-color: #2d6ba1; margin-top: -5%; float: right; /* margin-right: 51%; */ margin-top: -2%;"
+								ng-click="showTestDateDetails()"
+								ng-show="showTestDateEditButton">Edit</button> --></td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Scenario(s)</td>
+						<td>{{userProfileBean.testscenarios}}</td>
+<!-- 							<td><div ng-bind="scenariosSaved" ng-show="showScenariosDiv"></div> -->
+<!-- 							<input type="text" name="scenarios" ng-model="scenariosBind" -->
+<!-- 							style="width: 50%;" ng-show="showScenarios" class="form-control"> -->
+							
+							
+							<!-- <button type="button" class="btn btn-primary btn-xs"
+								style="/* margin-left: 14%; */float: right;margin-top: -5%;margin-right: 37%;" ng-click="saveScenarios()"
+								ng-show="showScenariosButton">Submit</button>
+								
+								
+							<button type="button" class="btn btn-primary btn-xs"
+								style="background-color: #2d6ba1; margin-top: -5%; float: right; /* margin-right: 51%; */ margin-top: -2%;"
+								ng-click="showScenariosDetails()"
+								ng-show="showScenariosEditButton">Edit</button> --></td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">QA
+							Environment URL</td>
+						<td>{{userProfileBean.testenvurl}}</td>
+						
+<!-- 						<td><div ng-bind="urlSaved" ng-show="showUrlDiv"></div>  -->
+<!-- 						<input -->
+<!-- 							type="text" name="qaEnvUrl" ng-model="testUrlBind" -->
+<!-- 							ng-show="showUrl" class="form-control" style="width: 50%;"> -->
+							
+							
+							<!-- <button type="button" class="btn btn-primary btn-xs"
+								style="/* margin-left: 14%; */float: right;margin-top: -5%;margin-right: 37%;" ng-click="saveTestUrl()"
+								ng-show="showUrlButton">Submit</button>
+								
+								
+							<button type="button" class="btn btn-primary btn-xs"
+								style="background-color: #2d6ba1; margin-top: -5%; float: right; /* margin-right: 51%; */ margin-top: -2%;"
+								ng-click="showUrlDetails()" ng-show="showUrlEditButton">Edit</button> -->
+						</td>
+					</tr>
+
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+		
+		<!-- <div class="panel-footer" align="right">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="bottom" title="Export Excel"><i
+				class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div> -->
+		
+	</div>
+</div>

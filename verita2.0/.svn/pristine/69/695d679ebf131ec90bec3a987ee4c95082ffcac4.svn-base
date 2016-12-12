@@ -1,0 +1,149 @@
+<div ng-controller="lennoxUserProfileController as tdctrl">
+	<div class="lennoxUserProfilePanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxTs.html'"></div>
+			<div class="panel-title">Test Summary</div>
+		</div>
+		<!-- <div class="tdPanel-body panel-body">
+			<div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+				<div class="col-md-12">
+					<p class="widgetHeading">{{tdTitle}}</p>
+				</div>
+			</div>
+			<div class="col-md-12"> -->
+
+		<div class="panel-body">
+			<div id="tstsummryLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<div id="userScroll">
+				<table class="table" id="profileid" style="border: 2pxsolid #dfd7ca;">
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Test
+							Number</td>
+						<td>{{userProfileBean.testName}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Test
+							Name</td>
+						<td ng-include="getTemplate1(userProfileBean)"></td>
+						<script type="text/ng-template" id="editscenario">
+                        		<td>{{userProfileBean.scenario_name}}</td>
+                        		<td> <button class="btn btn-primary btn-xs"  ng-click="editTestName(userProfileBean)">Edit</button>  </td>
+                    		</script>
+						<script type="text/ng-template" id="addscenarioname">
+                         	<td><input type="text" ng-model="userProfileBean.scenario_name" style="width:100%" class="form-control"/></td>
+                         	<td id="buttons">
+                               <button class="btn btn-primary btn-xs"  ng-click="updateTestName(userProfileBean)">Save</button>
+                               <button class="btn btn-primary btn-xs"  ng-click="reset()">Cancel</button>
+                         	</td>
+                   		</script>
+					</tr>
+
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Total
+							users</td>
+						<!-- <td><div ng-bind="totalUsersSaved" ></div><input type="text" name="totalUsers"
+							ng-model="totalUsersBind" size="10" ng-show="showTotalUsers" class="form-control" style="width: 50%;">
+						<button type="button" class="btn btn-info"
+								style="margin-left: 60%;margin-top: -21%;padding-bottom: 2%;" ng-click="saveTotalUsers()" ng-show="showTotalUsersButton">Submit</button>
+					</td> -->
+						<td>{{ userProfileBean.maxThreads}}</td>
+
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Start
+							Time</td>
+						<td>{{ userProfileBean.teststarttime}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">End
+							Time</td>
+						<td>{{ userProfileBean.testendtime}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Total
+							Test Duration</td>
+						<td>{{ userProfileBean.testduration}}</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Ramp
+							up</td>
+						<td>{{ userProfileBean.rampup}} (HH:MM:SS)</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Steady
+							Period</td>
+						<td>{{ userProfileBean.steadyperiod}} (HH:MM:SS)</td>
+					</tr>
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Ramp
+							down</td>
+						<td>{{ userProfileBean.rampdown}} (HH:MM:SS)</td>
+					</tr>
+
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Date
+							and Time Zone</td>
+						<td ng-include="getTemplateTimezone(userProfileBean)"></td>
+						<script type="text/ng-template" id="edittimezone">
+                        		<td>{{userProfileBean.testdatetimezone}}</td>
+                        		<td> <button class="btn btn-primary btn-xs"  ng-click="editDateTimeZone(userProfileBean)">Edit</button>  </td>
+                    		</script>
+						<script type="text/ng-template" id="addtimezone">
+                         		<td><input type="text" ng-model="userProfileBean.testdatetimezone" style="width:100%" class="form-control"/></td>
+                         		<td id="buttons">
+                               		<button class="btn btn-primary btn-xs"  ng-click="updateTestDateTimeZone(userProfileBean)">Save</button>
+                               		<button class="btn btn-primary btn-xs"  ng-click="resetTestDateTimeZone()">Cancel</button>
+                         		</td>
+                   			</script>
+					</tr>
+
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">Scenario(s)</td>
+						<td ng-include="getTemplateScenarios(userProfileBean)"></td>
+						<script type="text/ng-template" id="editscenariosdetails">
+                        		<td>{{userProfileBean.testscenarios}}</td>
+                        		<td> <button class="btn btn-primary btn-xs"  ng-click="editScenarioDetails(userProfileBean)">Edit</button>  </td>
+                    		</script>
+						<script type="text/ng-template" id="addscenariosss">
+                         		<td><input type="text" ng-model="userProfileBean.testscenarios" style="width:100%" class="form-control"/></td>
+                         		<td id="buttons">
+                               		<button class="btn btn-primary btn-xs"  ng-click="updateScenariosDetails(userProfileBean)">Save</button>
+                               		<button class="btn btn-primary btn-xs"  ng-click="resetScenario()">Cancel</button>
+                         		</td>
+                   			</script>
+					</tr>
+
+					<tr>
+						<td style="background: #2d6ba1; color: white; width: 30%;">QAEnvironmentURL</td>
+						<td ng-include="getTemplateEnvUrl(userProfileBean)"></td>
+						<script type="text/ng-template" id="editenvurl">
+                        		<td>{{userProfileBean.testenvurl}}</td>
+                        		<td> <button class="btn btn-primary btn-xs"  ng-click="editQaEnvUrlDetails(userProfileBean)">Edit</button>  </td>
+                    		</script>
+						<script type="text/ng-template" id="addenvurl">
+                         		<td><input type="text" ng-model="userProfileBean.testenvurl" style="width:100%" class="form-control"/></td>
+                         		<td id="buttons">
+                               		<button class="btn btn-primary btn-xs"  ng-click="updateQaEnvDetails(userProfileBean)">Save</button>
+                               		<button class="btn btn-primary btn-xs"  ng-click="resetUrl()">Cancel</button>
+                         		</td>
+                   			</script>
+					</tr>
+
+
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+		<!-- <div class="panel-footer" align="right">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="bottom" title="Export Excel"><i
+				class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div> -->
+
+	</div>
+</div>

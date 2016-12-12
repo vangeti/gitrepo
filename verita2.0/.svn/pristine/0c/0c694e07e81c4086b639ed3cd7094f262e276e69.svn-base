@@ -1,0 +1,42 @@
+<style>
+.times {
+	max-height: 100% !important;
+	min-height: 300px;
+	width: 100%;
+}
+</style>
+<div ng-controller="responseTimesController as tdctrl">
+	<div class="responseTimesPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxRT.html'"></div>
+			<!--<b class="panelHeaderTextPadding">Response Times</b>
+	 -->
+			<div class="panel-title">Response Times</div>
+		</div>
+
+		<div id='responseTimesPdf' style='display: none'></div>
+		<div>
+			<a href="#" ng-click="rtgeneratePDF();">Generate PDF</a>
+		</div>
+		<!-- 	<div class="tdPanel-body panel-body">
+			<div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+				<div class="col-md-12">
+					<p class="widgetHeading">{{tdTitle}}</p>
+				</div>
+			</div> -->
+		<div class="panel-body times">
+			<div id="testCaseYieldLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<div class="row graphWell">
+				<div id="rtGraph" style="width: 100%; height: 370px;"></div>
+			</div>
+		</div>
+		<!-- <div class="panel-footer" align="right">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="bottom" title="Export Excel"><i
+				class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div> -->
+	</div>
+</div>

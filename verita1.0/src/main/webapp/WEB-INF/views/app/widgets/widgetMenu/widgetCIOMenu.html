@@ -1,0 +1,312 @@
+<div class="dropdown">
+	<button class="btn widTBtn dropdown-toggle" type="button"
+		data-toggle="dropdown">
+		<i class="fa fa-bars" aria-hidden="true"></i>
+	</button>
+	<ul class="dropdown-menu">
+		<li><a href="#"><i class="fa fa-info-circle widgetDDLiSpace"
+				aria-hidden="true"></i>Interpret</a></li>
+		<li><a href="#"><i class="fa fa-heartbeat widgetDDLiSpace"
+				aria-hidden="true"></i>Diagnose</a></li>
+		<li><a href="#"><i class="fa fa-medkit widgetDDLiSpace"
+				aria-hidden="true"></i>Predict</a></li>
+		<li><a href="#"><i class="fa fa-user-md widgetDDLiSpace"
+				aria-hidden="true"></i>Prescribe</a></li>
+		
+		<li><a href="#"><i class="fa fa-bell widgetDDLiSpace"
+				aria-hidden="true"></i>Alert Me</a></li>
+		<li><a href="#"><i class="fa fa-star widgetDDLiSpace"
+				aria-hidden="true"></i>Add to Fav</a></li>
+		<li class="divider"></li>
+		<li><a href="#">CIMA</a></li>
+	</ul>
+</div>
+
+
+<!-- <div class="modal fade" id="prescribeModal" role="dialog" href="#">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Prescriptive Analysis</h4>
+			</div>
+			<div class="modal-body" style="min-height: 300px;height: 300px;">
+				<div class="row">
+					<table class="table qctable">
+						<thead>
+							<tr>
+								<th align="center">Fix Priority</th>
+								<th align="center">Application</th>
+								<th align="center">Defect ID</th>
+								<th align="center">Severity</th>
+								<th align="center">TC Blocked</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td align="center">1</td>
+								<td align="center">SAP Billing</td>
+								<td align="center">434</td>
+								<td align="center">1</td>
+								<td align="center"><a href="#">5</a></td>
+							</tr>
+
+							<tr>
+								<td align="center">2</td>
+								<td align="center">SAP FICO</td>
+								<td align="center">464</td>
+								<td align="center">1</td>
+								<td align="center"><a href="#">3</a></td>
+							</tr>
+							<tr>
+								<td align="center">3</td>
+								<td align="center">SAP Billing</td>
+								<td align="center">485</td>
+								<td align="center">1</td>
+								<td align="center"><a href="#">2</a></td>
+							</tr>
+							<tr>
+								<td align="center">4</td>
+								<td align="center">Citrix</td>
+								<td align="center">500</td>
+								<td align="center">2</td>
+								<td align="center"><a href="#">5</a></td>
+							</tr>
+							<tr>
+								<td align="center">5</td>
+								<td align="center">TX Web</td>
+								<td align="center">428</td>
+								<td align="center">2</td>
+								<td align="center"><a href="#">1</a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div> -->
+
+
+<div class="modal fade" id="diagnoseModal" role="dialog" href="#">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Diagnostic Analysis</h4>
+			</div>
+			<div class="modal-body">
+				
+	<div class="row">
+		<div class="container">
+			<div class="row">
+				<div class="2u chart-wrapper">
+					<div class="chart-title">  
+						Total Bug Count: <strong> <span id="total-bugs"></span> </strong> 
+					</div>					
+				</div>
+				<div class="2u chart-wrapper">
+						<span>
+							<a href="javascript:dc.filterAll();dc.redrawAll();">
+								<button>Reset All Filters</button>
+							</a>
+						</span>
+				</div>
+			</div>
+		
+			<div class="row">
+				<div id="sev_chart" style="float: left;"></div>
+				<div id="app_chart" style="float: left;"></div>
+				<div id="detect_chart" style="float: left;"></div>
+				<div id="close_chart" style="float: left;"></div>
+			</div>	
+			</div>
+			</div>	
+		
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" src="views/lib/js/crossfilter.js"></script>
+<script type="text/javascript" src="views/lib/js/dc-latest.js"></script>
+<script src='views/lib/js/d3.js' type='text/javascript'></script>
+<script type="text/javascript">
+
+//d3.json('testing_data1.json', function(error, data) {
+d3.csv('views/lib/ALM_Defects.csv', function(error, data) {
+//console.log(data.defects);
+    if(error)
+        throw new Error(error);
+
+		//var dataSet = data.defects;
+		var dataSet = data;
+		
+		var dateFormat = d3.time.format("%d-%m-%Y");
+		//var dateFormat = d3.time.format("%Y-%m-%d;%H:%M:%S.%L");
+
+		dataSet.forEach(function(d) {
+		//console.log(d.Closing_Date);
+			d.Closing_Date = dateFormat.parse(d.Closing_Date);
+			d.Detected_on_Date = dateFormat.parse(d.Detected_on_Date);
+				//d.Closing_Date.setDate(1);
+		});
+	
+		var ndx = crossfilter(dataSet);
+
+		var severityDimension = ndx.dimension(function(d) {	return d.Severity; });
+		var appDimension = ndx.dimension(function(d) {	return d.Application_Name; });
+
+		var detectedDate = ndx.dimension(function(d) { return d.Detected_on_Date; });
+		var detectedDateGroup = detectedDate.group();
+		//var detectedDateGroup = detectedDate.group().reduceSum(function(d) {return d.Detected_on_Date;});
+		
+		var closeDate = ndx.dimension(function(d) { return d.Closing_Date; });	
+		//console.log(closeDate);
+		//var closeDateGroup = closeDate.group();
+		var closeDateGroup = closeDate.group().reduceCount();
+		//var closeDateGroup = closeDate.group().reduceSum(function(d) {return d.Closing_Date;});
+
+	
+		var bugsBySeverity = severityDimension.group(); 
+		var bugsByApp = appDimension.group();
+	
+		var severityGroup   = severityDimension.group();
+		var appGroup   = appDimension.group();
+
+		var all = ndx.groupAll();
+
+		var totalBugsSeverity = severityDimension.group().reduceSum(function(d) {
+			return d.Severity;
+		});
+
+		var totalBugsApp = appDimension.group().reduceSum(function(d) {
+			return d.Application_Name;
+		});
+		
+		var detectMinDate = detectedDate.bottom(1)[0].Detected_on_Date;
+		var detectMaxDate = detectedDate.top(1)[0].Detected_on_Date;
+
+		var closeMinDate = closeDate.bottom(1)[0].Closing_Date;
+		var closeMaxDate = closeDate.top(1)[0].Closing_Date;
+		
+		var sevChart = dc.barChart('#sev_chart');
+		var appChart = dc.barChart('#app_chart');
+		var detectChart = dc.lineChart('#detect_chart');
+		var closeChart = dc.lineChart('#close_chart');
+		
+		var totalBugs = dc.numberDisplay("#total-bugs");
+
+		totalBugs
+			.formatNumber(d3.format("d"))
+			.valueAccessor(function(d){return d; })
+			.group(all);
+		
+		
+		sevChart
+			.width(468).height(380)
+			.transitionDuration(1000).clipPadding(10)	
+			.colors(['#4682B4'])
+			//.brushOn(false)
+			.xAxisLabel('Severity Level').yAxisLabel('Bug Count')
+			.dimension(severityDimension).group(severityGroup)
+			//.group(totalBugsSeverity)
+			.elasticX(true).elasticY(true).centerBar(false)
+			.x(d3.scale.ordinal().domain(severityDimension)).xUnits(dc.units.ordinal)
+			.renderHorizontalGridLines(true).renderVerticalGridLines(true)
+			.gap(10).barPadding(0.1).outerPadding(0.1)
+			.renderLabel(true).xAxis();	
+
+		appChart
+			.width(468).height(380)
+			.transitionDuration(1000).clipPadding(10)	
+			//.brushOn(false)
+			.colors(['#6bae10'])			
+			.xAxisLabel('Application Name').yAxisLabel('Bug Count')
+			.dimension(appDimension).group(appGroup)
+			//.group(totalBugsApp)
+			.elasticX(true).elasticY(true).centerBar(false)
+			.x(d3.scale.ordinal().domain(appDimension)).xUnits(dc.units.ordinal)
+			.renderHorizontalGridLines(true).renderVerticalGridLines(true)
+			.gap(10).barPadding(0.1).outerPadding(0.1)         
+			.renderLabel(true).xAxis();	
+			 
+		detectChart.width(468).height(380)
+			.margins({top: 10, right: 50, bottom: 60, left: 50})
+			.dimension(detectedDate)
+			.group(detectedDateGroup)
+			.renderArea(true)
+			.transitionDuration(500)
+			.x(d3.time.scale().domain([detectMinDate, detectMaxDate]))
+			.elasticX(true)
+			.elasticY(true)		
+			.brushOn(false)
+			.renderHorizontalGridLines(true)
+			.renderVerticalGridLines(true)
+			.xAxisLabel("Detect Date")
+			.yAxisLabel("Bug Count")
+			.on('renderlet', function(chart) {
+				
+				chart.selectAll('rect').on("click", function(d) {
+					console.log("click!", d);
+				});	
+					chart.selectAll("g.x text")
+					  .attr('dx', '-30')
+					  .attr('dy', '0')
+					  .attr('transform', "rotate(-55)");
+				
+			 })
+
+			
+			/* .renderlet(function (chart) {
+					chart.selectAll("g.x text")
+					  .attr('dx', '-30')
+					  .attr('dy', '0')
+					  .attr('transform', "rotate(-55)");
+				}) */
+			//.yAxis().ticks(16)
+			;
+		
+			closeChart.width(468).height(380)
+				.margins({top: 10, right: 50, bottom: 60, left: 50})
+				.dimension(closeDate)
+				.group(closeDateGroup)
+				.renderArea(true)
+				.transitionDuration(500)
+				.x(d3.time.scale().domain([closeMinDate, closeMaxDate]))
+				.elasticX(true)
+				.elasticY(true)		
+				.brushOn(false)
+				.renderHorizontalGridLines(true)
+				.renderVerticalGridLines(true)
+				.xAxisLabel("Close Date")
+				.yAxisLabel("Bug Count")
+				.on('renderlet', function(chart) {
+						chart.selectAll("g.x text")
+						  .attr('dx', '-30')
+						  .attr('dy', '0')
+						  .attr('transform', "rotate(-55)");
+					
+				 })				
+				/* .renderlet(function (chart) {
+						chart.selectAll("g.x text")
+						  .attr('dx', '-30')
+						  .attr('dy', '0')
+						  .attr('transform', "rotate(-55)");
+					}) */
+				.yAxis().ticks(6)
+				;
+		
+			dc.renderAll();
+
+});
+
+</script>
+

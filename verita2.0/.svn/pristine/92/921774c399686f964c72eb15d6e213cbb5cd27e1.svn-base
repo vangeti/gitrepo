@@ -1,0 +1,18 @@
+<div ng-controller="PerfErrorPerTrendController as eptctrl">
+	<div class="errPerTPanel panel commonPanel">
+		<div class="panel-heading do-panel-heading">
+		<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">
+				Error Percentage
+			</div>
+		</div>
+		<div class="eptPanel-body panel-body">
+			
+			<div class="row graphWell bTop">
+				<div id="errPerTrendChart" class="perfErrorTrend" style="width: 600px; height: 300px;"></div>
+
+			</div>
+		</div>
+	</div>
+</div>

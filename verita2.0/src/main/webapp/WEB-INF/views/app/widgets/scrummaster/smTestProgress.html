@@ -1,0 +1,42 @@
+<div ng-controller="smTestProgressController as stepctrl">
+	<div class="smTestProgressPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/scrum/widgetScrumTEPMenu.html'"></div>
+			<div class="panel-title">
+				Test Execution Progress<br>
+				<div class="panel_subTitle">{{smTEPTitle}}</div>
+			</div>
+		</div>
+		<div class="testProgressPanel-body panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="testProgressLoadImg_id" class="loadImage_class">
+					<i class="fa fa-spinner fa-spin fa-3x"></i>
+				</div>
+				<div ng-show="chartFlag">
+					<div id="smTEPChart" class="smTEP"
+						style="width: 600px; height: 300px;"></div>
+				</div>
+				<div ng-show="tableFlag">
+					<div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Application Name</th>
+									<th>Executed</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="(key,value) in allTestCasesMap">
+									<td>{{key}}</td>
+									<td>{{value}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

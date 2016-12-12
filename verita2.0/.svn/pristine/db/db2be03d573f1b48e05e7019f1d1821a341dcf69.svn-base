@@ -1,0 +1,19 @@
+<div ng-controller="ValueController as vctrl">
+	<div class="ValuePanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Value<br>
+				<div class="panel_subTitle">{{valueTitle}}</div>
+			</div>
+		</div>
+		<div class="valuePanel-body panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="donutchart" class="donut"
+					style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+	</div>
+</div>

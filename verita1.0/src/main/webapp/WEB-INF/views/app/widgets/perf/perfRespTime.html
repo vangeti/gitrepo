@@ -1,0 +1,20 @@
+<div ng-controller="PerfRespTimeController as rtctrl">
+	<div class="resTimePanel panel commonPanel">
+		<div class="panel-heading do-panel-heading">
+		<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">Response Time</div>
+		</div>
+		<div class="rtcPanel-body panel-body">
+			<div id="perfRespTimeLoadImg_id" class="loadImage_class">
+				<img src="views/images/spinner.gif" alt="" />
+			</div>
+
+			<div class="row graphWell bTop" align="center">
+				<div id="perfrespcurrbuildChart" class="perfRespTime"
+					style="width: 600px; height: 300px;"></div>
+
+			</div>
+		</div>
+	</div>
+</div>

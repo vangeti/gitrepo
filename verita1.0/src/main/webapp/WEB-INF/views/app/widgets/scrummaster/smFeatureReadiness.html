@@ -1,0 +1,42 @@
+<div ng-controller="smFeatureReadinessController as sfrctrl">
+	<div class="smFRPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetCIOMenu.html'"></div>
+			<div class="panel-title">
+				Feature Readiness<br>
+				<div class="panel_subTitle">{{sFRTitle}}</div>
+			</div>
+		</div>
+		<div class="featurePanel-body panel-body">
+
+			<div class="row graphWell bTop">
+				<div id="featureReadinessLoadImg_id" class="loadImage_class">
+					<img src="views/images/spinner.gif" alt="" />
+				</div>
+				<div ng-show="chartFlag">
+					<div id="smFRChart" class="smFR"
+						style="width: 600px; height: 300px;"></div>
+				</div>
+				<div ng-show="tableFlag">
+					<div>
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>Application Name</th>
+									<th>Feature Readyness</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="(key,value) in allDefects">
+									<td>{{key}}</td>
+									<td>{{value}}</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

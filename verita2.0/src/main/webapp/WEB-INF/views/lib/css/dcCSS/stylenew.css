@@ -1,0 +1,187 @@
+/**
+ Copyright (c) 2014 BrightPoint Consulting, Inc.
+
+ Permission is hereby granted, free of charge, to any person
+ obtaining a copy of this software and associated documentation
+ files (the "Software"), to deal in the Software without
+ restriction, including without limitation the rights to use,
+ copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the
+ Software is furnished to do so, subject to the following
+ conditions:
+
+ The above copyright notice and this permission notice shall be
+ included in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ OTHER DEALINGS IN THE SOFTWARE.
+ */
+.chart-wrapper {
+	background: #fff;
+	border: 1px solid #e2e2e2;
+	border-radius: 3px;
+	margin-bottom: 10px;
+}
+
+.chart-wrapper .chart-title {
+	border-bottom: 1px solid #d7d7d7;
+	color: #666;
+	font-size: 14px;
+	font-weight: 200;
+	padding: 7px 10px 4px;
+}
+
+.chart-wrapper .chart-stage {
+	/*min-height: 240px;*/
+	overflow: hidden;
+	padding: 5px 10px;
+	position: relative;
+}
+
+.chart-wrapper .chart-notes {
+	background: #fbfbfb;
+	border-top: 1px solid #e2e2e2;
+	color: #808080;
+	font-size: 12px;
+	padding: 8px 10px 5px;
+}
+
+.chart-wrapper svg {
+	position: relative;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+#total-projects {
+	background: #33CC99;
+	width: 200px;
+	position: relative;
+	height: 60px;
+	font-size: 29px;
+	color: white;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 0px;
+}
+
+#net-donations {
+	background: #33CC99;
+	width: 200px;
+	position: relative;
+	height: 60px;
+	font-size: 29px;
+	color: white;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 12px;
+	padding-bottom: 0px;
+}
+
+.dc-select-menu {
+	background: #33CC99;
+	width: 80%;
+	border: none;
+	position: relative;
+	height: 31px;
+	font-size: 15px;
+	color: white;
+	vertical-align: middle;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 0px;
+}
+
+.component {
+	fill: #e1e1e1;
+}
+
+.component .label {
+	font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+	text-anchor: middle;
+	fill: #0000FF;
+}
+
+.arc {
+	stroke-weight: 0.1;
+	fill: #4e8fff;
+}
+
+.arc2 {
+	stroke-weight: 0.1;
+	fill: #3660b0;
+}
+
+.label {
+	font-family: Myriad, "Helvetic Neue", Helvetica, Arial;
+	text-anchor: middle;
+}
+
+.radial-svg {
+	display: block;
+	margin: 0 auto;
+}
+
+/*******************************************************/
+.main-container-admin {
+	margin: auto 25px;
+	min-height: 100%;
+	position: relative;
+	padding: 0;
+}
+
+.blueError {
+	background: url(../img/blue-error.png) no-repeat #fff right 10px;
+	border-color: #00adee;
+	box-shadow: 0 0 5px #d1f2ff inset;
+}
+
+.loginOuterWapper {
+	display: table;
+	height: 100%;
+	padding: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	width: 100%;
+}
+
+.loginInnerWapper {
+	display: table-cell;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.loginWrapper {
+	background: #F7F7F7;
+	border: 1px solid #CCC;
+	color: #868686;
+	font-family: Calibri, Arial, Helvetica, sans-serif;
+	margin: 0 auto;
+	padding: 15px;
+	width: 310px;
+}
+
+.userDetailsAlertBox {
+	position: relative;
+	top: 80px;
+	left: 560px;
+	width: 250px;
+	height: 90px;
+	display: none;
+	background: #0093CF;
+	color: #ffffff;
+	font-size: 18px;
+	padding: 19px;
+	border-radius: 12px;
+}

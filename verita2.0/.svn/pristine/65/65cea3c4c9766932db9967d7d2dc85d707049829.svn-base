@@ -1,0 +1,44 @@
+<div ng-controller="testerObservationsController as cwctrl">
+	<div class="panel panel-default drilDownPanel">
+		<div class="panel-heading do-panel-heading">
+			<div class="panel-title">Add Observation</div>
+		</div>
+		<div class="panel-body drilDownPanel-Body">
+			<div class="graphWell">
+				<div class="row mTopMini">
+
+					<div class="col-md-6">
+						<div class="row mTop20">
+							<div class="col-md-4 mTopMini">
+								<span class="label label-default reprtsTitle">Metric Name</span>
+							</div>
+							<div class="col-md-8">
+								<select ng-model="widgetName" ng-change="onChange()">
+									<option ng-repeat="widget in widgets " title="{{widget}}"
+										value="{{widget.key}}">{{widget.value}}</option>
+								</select>
+							</div>
+
+						</div>
+
+						<div class="row mTop20">
+							<div class="col-md-4 mTopMini">
+								<label>Comments: </label>
+							</div>
+							<div class="col-md-8">
+								<textarea id="comments" ng-model="comment"
+									placeholder="Enter your comments" rows="7" cols="70"></textarea>
+							</div>
+
+						</div>
+
+						<div class="row mTop mRight2" align="center"> 
+							<button class="btn btn-primary" ng-click="submitComment()">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

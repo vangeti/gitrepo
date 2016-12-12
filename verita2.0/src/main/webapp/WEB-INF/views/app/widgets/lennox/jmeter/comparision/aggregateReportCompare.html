@@ -1,0 +1,228 @@
+<div ng-controller="aggregateReportControllerCompare as tdctrl">
+	<div class="aggregateReportPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxAggrRepForComparision.html'"></div>
+			<!-- <b class="panelHeaderTextPadding">Aggregate Report</b> -->
+			<div class="panel-title">Aggregate Report</div>
+		</div>
+		<div class="panel-body">
+			<div id="aggrprtLoadImgcmore_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<!-- <table class="table table-bordered" id="headerTable"> -->
+			<div id="hideagg">
+				<ul class="nav nav-tabs">
+					<li class="active"><a data-toggle="tab" href=""
+						ng-click="tabbed('transactions');">Transactions</a></li>
+					<li><a data-toggle="tab" href="" ng-click="tabbed('request')">Requests</a></li>
+				</ul>
+				<table class="table table-bordered" style="margin-bottom: 0px;">
+					<thead>
+						<tr>
+							<th>&nbsp;</th>
+							<th colspan="6" align="center">{{testwith_nameToDisplay}}</th>
+							<th colspan="6" align="center">{{test_to_nameToDisplay}}</th>
+							<th style="border-bottom: none;">&nbsp;</th>
+							<th style="border-bottom: none;">&nbsp;</th>
+						</tr>
+						<tr>
+
+							<th style="width: 20%;"><b id = "aggrHeaders" 
+								ng-click="sortType = 'transactionNameTest1'; sortReverse = !sortReverse">
+									Transaction Name <span
+									ng-show="sortType == 'transactionNameTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'transactionNameTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+			
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'countTest1'; sortReverse = !sortReverse">
+									Count <span ng-show="sortType == 'countTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'countTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'avgTest1'; sortReverse = !sortReverse">
+									Avg (ms) <span ng-show="sortType == 'avgTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'avgTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_90_lineTest1'; sortReverse = !sortReverse">
+									90% Line(ms) <span
+									ng-show="sortType == 'aggregate_report_90_lineTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_90_lineTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th> 
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_minTest1'; sortReverse = !sortReverse">
+									Min (ms) <span
+									ng-show="sortType == 'aggregate_report_minTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_minTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_maxTest1'; sortReverse = !sortReverse">
+									Max (ms) <span
+									ng-show="sortType == 'aggregate_report_maxTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_maxTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_errorTest1'; sortReverse = !sortReverse">
+									Error (%) <span
+									ng-show="sortType == 'aggregate_report_errorTest1' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_errorTest1' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'countTest2'; sortReverse = !sortReverse">
+									Count <span ng-show="sortType == 'countTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'countTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'avgTest2'; sortReverse = !sortReverse">
+									Avg (ms) <span ng-show="sortType == 'avgTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'avgTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_90_lineTest2'; sortReverse = !sortReverse">
+									90% Line(ms) <span
+									ng-show="sortType == 'aggregate_report_90_lineTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_90_lineTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_minTest2'; sortReverse = !sortReverse">
+									Min (ms) <span
+									ng-show="sortType == 'aggregate_report_minTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_minTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_maxTest2'; sortReverse = !sortReverse">
+									Max (ms) <span
+									ng-show="sortType == 'aggregate_report_maxTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_maxTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'aggregate_report_errorTest2'; sortReverse = !sortReverse">
+									Error (%) <span
+									ng-show="sortType == 'aggregate_report_errorTest2' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'aggregate_report_errorTest2' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'diffAvg'; sortReverse = !sortReverse">
+									Diff (Avg) <span
+									ng-show="sortType == 'diffAvg' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'diffAvg' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+							<th style="width: 5%;"><b id = "aggrHeaders"
+								ng-click="sortType = 'diffAvgPercentage'; sortReverse = !sortReverse">
+									Error Diff (%) <span
+									ng-show="sortType == 'diffAvgPercentage' && !sortReverse"
+									class="fa fa-caret-down"></span> <span
+									ng-show="sortType == 'diffAvgPercentage' && sortReverse"
+									class="fa fa-caret-up"></span>
+							</b></th>
+						</tr>
+					</thead>
+				</table>
+				<div class="divScroll1" style="height: 200px; overflow: auto; width: 100%;">
+					<table class="table table-bordered">
+						<tbody>
+							<tr
+								ng-repeat="agg in aggListCompare | orderBy:sortType:sortReverse">
+								<td style="width: 20%;">
+									<div style="width: 242px; word-wrap: break-word">{{
+										agg.transactionNameTest1 }}</div>
+								</td>
+								
+								<td style="width: 5%;">{{ agg.countTest1}}</td>
+								<td style="width: 5%;"
+									ng-style="{true: {'font-weight': 'bold', 'color': 'red'}}[{{agg.avgTest1}} >= 5000]">
+									{{ agg.avgTest1 }}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_90_lineTest1}}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_minTest1}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_maxTest1}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_errorTest1}}</td>
+								
+								<td style="width: 5%;">{{ agg.countTest2}}</td>
+								<td style="width: 5%;"
+									ng-style="{true: {'font-weight': 'bold', 'color': 'red'}}[{{agg.avgTest2}} >= 5000]">
+									{{ agg.avgTest2 }}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_90_lineTest2}}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_minTest2}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_maxTest2}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_errorTest2}}</td>
+
+								<td style="width: 5%;">{{ agg.diffAvg}}</td>
+								<td style="width: 5%;">{{ agg.diffAvgPercentage}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<div id="requests" align="center" class="divScroll1" style="height: 200px; overflow: auto; width: 100%;">
+					<table class="table table-bordered">
+						<tbody>
+							<tr
+								ng-repeat="agg in aggListCompare | orderBy:sortType:sortReverse">
+								<td style="width: 20%;">
+									<div style="width: 242px; word-wrap: break-word">{{
+										agg.transactionNameTest1 }}</div>
+								</td>
+								
+								<td style="width: 5%;">{{ agg.countTest1}}</td>
+								<!-- <td style="padding: 1% 16px 1% 21px;">{{ agg.avgTest1}}</td> -->
+								<td style="width: 5%;"
+									ng-style="{true: {'font-weight': 'bold', 'color': 'red'}}[{{agg.avgTest1 }} >= 5000]">
+									{{ agg.avgTest1 }}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_90_lineTest1}}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_minTest1}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_maxTest1}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_errorTest1}}</td>
+
+								<td style="width: 5%;">{{ agg.countTest2}}</td>
+								<!-- <td style="padding: 1% 16px 1% 21px;">{{ agg.avgTest2}}</td> -->
+								<td style="width: 5%;"
+									ng-style="{true: {'font-weight': 'bold', 'color': 'red'}}[{{agg.avgTest2}} >= 5000]">
+									{{ agg.avgTest2 }}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_90_lineTest2}}</td>
+								<td style="width: 5%;">{{agg.aggregate_report_minTest2}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_maxTest2}}</td>
+								<td style="width: 5%;">{{ agg.aggregate_report_errorTest2}}</td>
+
+								<td style="width: 5%;">{{ agg.diffAvg}}</td>
+								<td style="width: 5%;">{{ agg.diffAvgPercentage}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<div class="row graphWell">
+			<div id="coderepo1" class="perfTestDetailsTable"></div>
+		</div>
+	</div>
+</div>

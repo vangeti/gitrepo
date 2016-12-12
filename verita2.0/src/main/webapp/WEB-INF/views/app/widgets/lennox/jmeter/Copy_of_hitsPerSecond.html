@@ -1,0 +1,37 @@
+<div ng-controller="hitsPerSecondController as tdctrl">
+	<div class="hitsPerSecondPanel panel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/lennox/WidgetLennoxmenu/widgetLennoxHPS.html'"></div>
+			<!-- <b class="panelHeaderTextPadding">Hits per second</b> -->
+
+			<div class="panel-title">Hits per sec</div>
+		</div>
+		<!-- <div class="tdPanel-body panel-body">
+			<div class="widgetTitleDiv row perfTestDetailsTitle" align="center">
+				<div class="col-md-12">
+					<p class="widgetHeading">{{tdTitle}}</p>
+				</div>
+			</div>
+ -->
+		<div id='hitsPerSecondPdf' style='display: none'></div>
+		<div>
+			<a href="#" ng-click="htgeneratePDF();">Generate PDF</a>
+		</div>
+
+		<div class="panel-body">
+			<div id="hpsLoadImg_id" class="loadImage_class">
+				<i class="fa fa-spinner fa-spin fa-3x"></i>
+			</div>
+			<div class="row graphWell">
+
+				<div id="hitsPS" style="width: 600px; height: 300px;"></div>
+			</div>
+		</div>
+		<!-- <div class="panel-footer" align="right">
+			<span class="widgetFooterSpan" data-toggle="tooltip"
+				data-placement="bottom" title="Export Excel"><i
+				class="fa fa-file-excel-o" aria-hidden="true"></i></span>
+		</div> -->
+	</div>
+</div>

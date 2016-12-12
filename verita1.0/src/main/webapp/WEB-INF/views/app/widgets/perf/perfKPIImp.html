@@ -1,0 +1,70 @@
+<div ng-controller="PerfKPIController as kctrl">
+	<div class="kpiPanel panel commonPanel">
+		<div class="panel-heading do-panel-heading">
+			<div class="widgetMenuIncludeDiv"
+				ng-include="'views/app/widgets/widgetMenu/widgetPerfMenu.html'"></div>
+			<div class="panel-title">
+				KPI Status Since Last Build<br>
+			</div>
+		</div>
+		<div class="kctPanel-body panel-body">
+
+			<div class="row graphWell" align="center">
+				<div id="perfKPILoadImg_id" class="loadImage_class">
+					<img src="views/images/spinner.gif" alt="" />
+				</div>
+				<div class="perfKpiPanelContent">
+					<div class="row bTop">
+						<div class="col-md-10 tdTopTitle" align="left">
+							Status<br>
+							<div class="tdTop_subTitle">Improvement Status</div>
+						</div>
+						<div class="col-md-2" style="color: red; margin-top: 20px;">
+							<i class="fa fa-circle" aria-hidden="true"></i>
+						</div>
+					</div>
+
+					<table class="table kpiTable table-bordered">
+						<thead>
+							<tr>
+								<th>Metric</th>
+								<th>KPI(Sec)</th>
+								<th>Prev</th>
+								<th>Curr</th>
+								<th>Diff</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Avg. Resp Time</td>
+								<td>1.2</td>
+								<td>{{PrevrespTime}}</td>
+								<td>{{respTime}}</td>
+								<!-- <td class="{{respcolor}} diffcss">{{respTimeDiff}}</td> -->
+								<td><span class="label {{respcolor}}">{{respTimeDiff}}</span></td>
+							</tr>
+							<tr>
+								<td>TPS</td>
+								<td>0.20</td>
+								<td>{{Prevtps}}</td>
+								<td>{{tps}}</td>
+								<!-- <td class="{{tpscolor}} diffcss">{{tpsTimeDiff}}</td> -->
+								<td><span class="label {{tpscolor}}">{{tpsTimeDiff}}</span></td>
+							</tr>
+							<tr>
+								<td>Errors</td>
+								<td>10.0</td>
+								<td>{{Preverrors}}</td>
+								<td>{{errors}}</td>
+								<!-- <td class="{{errorcolor}} diffcss">{{errorTimeDiff}}</td> -->
+								<td><span class="label {{errorcolor}}">{{errorTimeDiff}}</span></td>
+							</tr>
+
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

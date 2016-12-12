@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>dc.js - Ordinal Bar Chart Example</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/dc.css"/>
+	
+	<style>
+	label {
+		font-weight: bold;
+	}
+	input[type=radio]{
+		vertical-align:top;
+	}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+	<hr>
+	<div class="row">
+		<div class="container">
+		<h3> Custom graphs - Defects </h3>
+			<div class="row" style="float: left;">
+				<div class="chart-wrapper">
+		
+					<label>REST API URL: </label> 
+					<input type="text" size="40" name="rest_api" id="rest_api" value=""/><br/>
+					<button class="btn" onclick="loadData()">Load data</button><br/><br/>
+					
+					<b>OR</b><br/><br/>
+
+					<label>Upload CSV File: </label> 
+					<input type="file" name="File Upload" id="csv_file" accept=".csv" style="line-height: normal;"/><br/>
+					<br/><br/>
+					<label>Graph Type:</label> 
+					<div>
+					<input type="radio" name="chartType" value="barChart" checked> Bar Chart &nbsp;&nbsp;
+					<input type="radio" name="chartType" value="lineChart"> Line Chart &nbsp;&nbsp; <br/>
+					<input type="radio" name="chartType" value="stackedChart"> Stacked Chart &nbsp;&nbsp;
+					<input type="radio" name="chartType" value="pieChart"> Pie Chart &nbsp;&nbsp;
+					</div>
+					<br/>
+	
+					<label>Select X:</label> 
+					<select name="xColumn" id="xColumn"> 
+						<option value="">Select X-Axis.. </option>
+					</select>
+					
+					<label>Aggregation :</label> 
+					<div>
+					<input type="radio" name="aggrFunc" value="count"> Count &nbsp;&nbsp;
+					<input type="radio" name="aggrFunc" value="sum" disabled> Sum &nbsp;&nbsp;
+					<input type="radio" name="aggrFunc" value="avg" disabled> Avg &nbsp;&nbsp;
+					<input type="radio" name="aggrFunc" value="" checked> None &nbsp;&nbsp;
+					</div>
+					
+					<div id="group_by" style="display: none;"><label>Group By:</label> 
+					<select name="groupBy" id="groupBy"> 
+						<option value="">Select group by.. </option>
+					</select></div>
+					<br/>
+					<label>Select Y:</label> 
+					<select name="yColumn" id="yColumn"> 
+						<option value="">Select Y-Axis.. </option>
+					</select>
+					
+					<br/>
+					<input type="button" name="Submit" id="Submit" value="Plot" onclick="drawChart();"/>
+				</div>
+				
+				<br/><br/>
+				<div class="chart-wrapper" style='display: none;'>
+					<div class="chart-title">  
+						Total Bug Count: <strong> <span id="total-records"></span> </strong> 
+					</div>					
+				</div>
+				<div class="chart-wrapper" style='display: none;'>
+						<span>
+							<a href="javascript:dc.filterAll();dc.redrawAll();">
+								<!-- <font color="#33CC99">Reset All Filters</font> -->
+								<button>Reset All Filters</button>
+							</a>
+						</span>
+				</div>			
+			</div>
+
+			<div class="row" style="float: left; margin-left: 70px; height: 280px;">
+				<div id="chart"></div>
+				<!-- <div id="app_chart"></div> -->
+				<div id='errorMsg' style="color: red; padding-left: 55px;">
+				</div>
+			</div>
+		</div>
+				
+<script type="text/javascript" src="../js/d3.js"></script>
+<script type="text/javascript" src="../js/crossfilter.js"></script>
+<script type="text/javascript" src="../js/dc-latest.js"></script>
+<script type='text/javascript' src='../js/queue.js' ></script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-csv/0.71/jquery.csv-0.71.min.js"></script> -->
+<script type="text/javascript" src="../js/jquery.v1.12.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery.csv-0.71.min.js"></script>
+<script type="text/javascript" src="../js/defects_charts.js"></script>
+
+
+</div>
+</body>
+</html>
